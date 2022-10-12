@@ -24,6 +24,8 @@ In order to install the required packages, open a new terminal in VS Code by pre
 pip install -r requirements.txt
 ```
 
+In order to run pyrtlsdr, you will need to build librtlsfr. The instructions for building that can be found [here](https://github.com/librtlsdr/librtlsdr).
+
 ## Running the Program
 
 Now that you have all the required packages installed, you can run the program by ... TODO: Write instructions on running the program.
