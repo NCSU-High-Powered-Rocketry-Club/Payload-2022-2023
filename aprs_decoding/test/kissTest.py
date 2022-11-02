@@ -10,17 +10,21 @@ import struct
 import sys, subprocess
 
 def p(x): 
-    print(x)
-    data = x#str(x)
-    newFrame = aprs.parse_frame(data)
-    print(str(newFrame))
-    packet = aprspy.APRS.parse(str(newFrame))
-    print(packet)
-    print(packet.source)
-    print(packet.destination)
-    print(packet.path)
-    print(packet.timestamp)
-    print(packet.info)
+    try:
+        print(x)
+        data = x#str(x)
+        newFrame = aprs.parse_frame(data)
+        print(str(newFrame))
+        packet = aprspy.APRS.parse(str(newFrame))
+        print(packet)
+        print(packet.source)
+        print(packet.destination)
+        print(packet.path)
+        print(packet.timestamp)
+        print(packet.info)
+        print(packet.message)
+    except:
+        print("oof")
     #print(aprspy.APRS.parse(x).info)
     
 
