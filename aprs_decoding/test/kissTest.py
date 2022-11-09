@@ -8,6 +8,7 @@ import aprspy
 import binascii
 import struct
 import sys, subprocess
+import threading
 
 def p(x): 
     try:
@@ -22,49 +23,29 @@ def p(x):
         print(packet.path)
         print(packet.timestamp)
         print(packet.info)
-        print(packet.message)
+        
+        if str(packet).startswith("<MessagePacket"):
+            print(packet.message)
+        
     except:
-        print("oof")
+        print("failed to parse message lmao")
     #print(aprspy.APRS.parse(x).info)
     
-
+def startWavFile(potato):
+    command = 'sox -t wav ISSpkt_full.wav -esigned-integer -b 16 -r 48000 -t raw - | direwolf -B 1200 -c direwolf.conf -b 16 -n 1 -r 48000 -a 0 -'
+    proc = subprocess.call(command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    
 def main():
-    #ki = kiss.SerialKISS(port='/dev/cu.Repleo-PL2303-00303114', speed='9600')
-    #sox data.wav -c 1 -t s16 -r 48000 -t wav - | direwolf -B 1200 -c ./dire2.conf -d p -
-    proc = subprocess.run('sox ISSpkt.wav -c 1 -t s16 -r 48000 -t wav - | direwolf -B 1200 -c ./direwolf.conf-d p -')
+    newThread = threading.Thread(target= startWavFile, args=(2,))
+    newThread.start()
     ki = kiss.TCPKISS(host='localhost', port=8001)
     ki.start()
     while True:
         
         ki.read(callback=p)
         
-        
-        
-
-def main2():
-    data = b'\x00\xa8\xa0\xa6\xaa\xa4\xac`\xae\x88n\xa0@@\xea\xae\x92\x88\x8ab@b\xae\x92\x88\x8ad@c\x03\xf0`\'U{ora>/`"Bw}_%\r'
-    data2 = b'\x00\x84\x8a\x82\x86\x9e\x9c`\x98\x8e\xaa@@@`\x96\x8cl\xa4\x82\x98\xe4\xae\x92\x88\x8ad@\xe1\x03\xf0;147.260UT*111111z4117.75N/11228.09Wr147.260MHz T103 R95m Net Tu9pm Mtg2ndSA\r'
-    data3 = b'\x00\x82\xa0\x9e\xa8f`\xe0\x90\x9e\x98\x88\x8a\x9c\xe0\x96\x8cl\xa4\x82\x98\xe2\xae\x92\x88\x8ad@\xe1\x03\xf0!3901.82N/11209.11W# 12.2V 25F '
-    #stripped = kiss.util.strip_df_start(data)
-    newFrame = aprs.parse_frame(data3)
-    print(str(newFrame))
-    packet = aprspy.APRS.parse(str(newFrame))
-    print(packet)
-    print(packet.source)
-    print(packet.destination)
-    print(packet.path)
-    print(packet.timestamp)
-    print(packet.info)
-    #print(newFrame.source)
-    #print(newFrame.destination)
-    #print(newFrame.path)
-    #print(newFrame.info)
-    #print(newFrame.text)
-    #for importer, modname, ispkg in pkgutil.iter_modules(aprs.__path__):
-    #    print ("Found submodule %s (is a package: %s)" % (modname, ispkg))
-    #print(pykiss.decode_dataframe(data))
-    #print(aprspy.APRS.parse(data))
-
+    newThread.join()
+    
 
 if __name__ == '__main__':
     main()
