@@ -1,4 +1,5 @@
 import board
+import busio
 import adafruit_bno055
 
 
@@ -9,7 +10,7 @@ class BNOInterface:
     """
 
     def __init__(self):
-        i2c = board.I2C()
+        i2c = busio.I2C(board.SCL, board.SDA)
         self.sensor = adafruit_bno055.BNO055_I2C(i2c)
 
     def get_acceleration(self) -> tuple:

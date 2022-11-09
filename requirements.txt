@@ -6,3 +6,4 @@ pyrtlsdr
 
 # BNO055
 adafruit-circuitpython-bno055
+Adafruit-Blinka

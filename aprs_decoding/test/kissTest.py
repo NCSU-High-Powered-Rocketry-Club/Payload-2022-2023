@@ -31,7 +31,7 @@ def p(x):
 def main():
     #ki = kiss.SerialKISS(port='/dev/cu.Repleo-PL2303-00303114', speed='9600')
     #sox data.wav -c 1 -t s16 -r 48000 -t wav - | direwolf -B 1200 -c ./dire2.conf -d p -
-    #proc = subprocess.run('sox data.wav -c 1 -t s16 -r 48000 -t wav - | direwolf -B 1200 -d p -')
+    proc = subprocess.run('sox ISSpkt.wav -c 1 -t s16 -r 48000 -t wav - | direwolf -B 1200 -c ./direwolf.conf-d p -')
     ki = kiss.TCPKISS(host='localhost', port=8001)
     ki.start()
     while True:
