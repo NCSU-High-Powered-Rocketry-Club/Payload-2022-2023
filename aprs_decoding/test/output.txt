@@ -1,0 +1,206 @@
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@`\x96n\xa4\x8c\x96@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0\r'
+Parsed APRS frame: K7RFK>CQ,RS0ISS*:
+APRS Packet: <BeaconPacket: K7RFK>
+Source: K7RFK
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: 
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@`\x9cn\x9c\x8a\xac@\xe2\xa4\xa6`\x92\xa6\xa6\xe0\xae\x92\x88\x8ad@d\xae\x92\x88\x8ab@c\x03\xf0>from DM43\r'
+Parsed APRS frame: N7NEV-1>CQ,RS0ISS*,WIDE2-2,WIDE1-1:>from DM43
+APRS Packet: <BeaconPacket: N7NEV-1>
+Source: N7NEV-1
+Destination: CQ
+Path: RS0ISS*,WIDE2-2,WIDE1-1
+Timestamp: None
+Info: from DM43
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@\xe0\x9cn\x90\xa2\x84@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0=4038.2604n/11155.90744w-HELLO FROM N7HQB IN SLC UTAH!\r'
+Parsed APRS frame: N7HQB>CQ,RS0ISS*:=4038.2604n/11155.90744w-HELLO FROM N7HQB IN SLC UTAH!
+APRS Packet: <BeaconPacket: N7HQB>
+Source: N7HQB
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: 4038.2604n/11155.90744w-HELLO FROM N7HQB IN SLC UTAH!
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@\xe0\x9cn\x90\xa2\x84@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0HELLO VIA THE ISS\r'
+Parsed APRS frame: N7HQB>CQ,RS0ISS*:HELLO VIA THE ISS
+APRS Packet: <BeaconPacket: N7HQB>
+Source: N7HQB
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: ELLO VIA THE ISS
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@`\x96n\xa4\x8c\x96@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0=4635.49N/12032.27W-\r'
+Parsed APRS frame: K7RFK>CQ,RS0ISS*:=4635.49N/12032.27W-
+APRS Packet: <BeaconPacket: K7RFK>
+Source: K7RFK
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: 4635.49N/12032.27W-
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@\xe0\x9cn\x90\xa2\x84@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0=4038.2604n/11155.90744w-HELLO FROM N7HQB IN SLC UTAH!\r'
+Parsed APRS frame: N7HQB>CQ,RS0ISS*:=4038.2604n/11155.90744w-HELLO FROM N7HQB IN SLC UTAH!
+APRS Packet: <BeaconPacket: N7HQB>
+Source: N7HQB
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: 4038.2604n/11155.90744w-HELLO FROM N7HQB IN SLC UTAH!
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@\xe0\x9cn\x90\xa2\x84@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0CQ\r'
+Parsed APRS frame: N7HQB>CQ,RS0ISS*:CQ
+APRS Packet: <BeaconPacket: N7HQB>
+Source: N7HQB
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: Q
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@\xe0\x9cn\x90\xa2\x84@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0HELLO\r'
+Parsed APRS frame: N7HQB>CQ,RS0ISS*:HELLO
+APRS Packet: <BeaconPacket: N7HQB>
+Source: N7HQB
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: ELLO
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@\xe0\x9cn\x90\xa2\x84@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0HELLO VIA THE ISS\r'
+Parsed APRS frame: N7HQB>CQ,RS0ISS*:HELLO VIA THE ISS
+APRS Packet: <BeaconPacket: N7HQB>
+Source: N7HQB
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: ELLO VIA THE ISS
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@`\x96n\xa4\x8c\x96@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0>CN96\r'
+Parsed APRS frame: K7RFK>CQ,RS0ISS*:>CN96
+APRS Packet: <BeaconPacket: K7RFK>
+Source: K7RFK
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: CN96
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0>ARISS - International Space Station'
+Parsed APRS frame: RS0ISS>CQ:>ARISS - International Space Station
+failed to parse message lmao (not a MessagePacket)
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@`\x96n\xa4\x8c\x96@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0>CN96\r'
+Parsed APRS frame: K7RFK>CQ,RS0ISS*:>CN96
+APRS Packet: <BeaconPacket: K7RFK>
+Source: K7RFK
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: CN96
+
+----New data----
+Raw data from KISS: b'\x00\x82\xa4\x92\xa6\xa6@\xe0\x96\x8cb\x84\xaa\xb4`\xa4\xa6`\x92\xa6\xa6\xe0\x82\xa0\xa4\xa6@@`\xae\x92\x88\x8ad@d\xa6\x8e\x82\xa8\x8a@`\x92\xa6\xa6@@@`\x92\x8e\x82\xa8\x8a@`\xa0\x86\xa6\x82\xa8@`\x84\x8a\x82\x86\x9e\x9ca\x03\xf0=3932.15N/11951.16Wy.kf1buz and k1gem say hi from reno nv\r'
+Parsed APRS frame: KF1BUZ>ARISS,RS0ISS*,APRS,WIDE2-2,SGATE,ISS,IGATE,PCSAT,BEACON:=3932.15N/11951.16Wy.kf1buz and k1gem say hi from reno nv
+APRS Packet: <PositionPacket: KF1BUZ>
+Source: KF1BUZ
+Destination: ARISS
+Path: RS0ISS*,APRS,WIDE2-2,SGATE,ISS,IGATE,PCSAT,BEACON
+Timestamp: None
+Info: 3932.15N/11951.16Wy.kf1buz and k1gem say hi from reno nv
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@`\x96n\xa4\x8c\x96@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0\r'
+Parsed APRS frame: K7RFK>CQ,RS0ISS*:
+APRS Packet: <BeaconPacket: K7RFK>
+Source: K7RFK
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: 
+
+----New data----
+Raw data from KISS: b'\x00\x82\xa4\x92\xa6\xa6@\xe0\x96\x8cb\x84\xaa\xb4`\xa4\xa6`\x92\xa6\xa6\xe0\x82\xa0\xa4\xa6@@`\xae\x92\x88\x8ad@d\xa6\x8e\x82\xa8\x8a@`\x92\xa6\xa6@@@`\x92\x8e\x82\xa8\x8a@`\xa0\x86\xa6\x82\xa8@`\x84\x8a\x82\x86\x9e\x9ca\x03\xf0=3932.15N/11951.16Wy.kf1buz and k1gem say hi from reno nv\r'
+Parsed APRS frame: KF1BUZ>ARISS,RS0ISS*,APRS,WIDE2-2,SGATE,ISS,IGATE,PCSAT,BEACON:=3932.15N/11951.16Wy.kf1buz and k1gem say hi from reno nv
+APRS Packet: <PositionPacket: KF1BUZ>
+Source: KF1BUZ
+Destination: ARISS
+Path: RS0ISS*,APRS,WIDE2-2,SGATE,ISS,IGATE,PCSAT,BEACON
+Timestamp: None
+Info: 3932.15N/11951.16Wy.kf1buz and k1gem say hi from reno nv
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@`\x96n\xa4\x8c\x96@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0\r'
+Parsed APRS frame: K7RFK>CQ,RS0ISS*:
+APRS Packet: <BeaconPacket: K7RFK>
+Source: K7RFK
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: 
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@\xe0\x9cn\x90\xa2\x84@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0TEST\r'
+Parsed APRS frame: N7HQB>CQ,RS0ISS*:TEST
+APRS Packet: <BeaconPacket: N7HQB>
+Source: N7HQB
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: EST
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@`\x96n\xa4\x8c\x96@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0>CN96\r'
+Parsed APRS frame: K7RFK>CQ,RS0ISS*:>CN96
+APRS Packet: <BeaconPacket: K7RFK>
+Source: K7RFK
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: CN96
+
+----New data----
+Raw data from KISS: b'\x00\x82\xa4\x92\xa6\xa6@\xe0\x96\x8cb\x84\xaa\xb4`\xa4\xa6`\x92\xa6\xa6\xe0\x82\xa0\xa4\xa6@@`\xae\x92\x88\x8ad@d\xa6\x8e\x82\xa8\x8a@`\x92\xa6\xa6@@@`\x92\x8e\x82\xa8\x8a@`\xa0\x86\xa6\x82\xa8@`\x84\x8a\x82\x86\x9e\x9ca\x03\xf0=3932.15N/11951.16Wy.kf1buz and k1gem say hi from reno nv\r'
+Parsed APRS frame: KF1BUZ>ARISS,RS0ISS*,APRS,WIDE2-2,SGATE,ISS,IGATE,PCSAT,BEACON:=3932.15N/11951.16Wy.kf1buz and k1gem say hi from reno nv
+APRS Packet: <PositionPacket: KF1BUZ>
+Source: KF1BUZ
+Destination: ARISS
+Path: RS0ISS*,APRS,WIDE2-2,SGATE,ISS,IGATE,PCSAT,BEACON
+Timestamp: None
+Info: 3932.15N/11951.16Wy.kf1buz and k1gem say hi from reno nv
+
+----New data----
+Raw data from KISS: b'\x00\x86\xa2@@@@\xe0\x9cn\x90\xa2\x84@`\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0HELLO VIA THE ISS\r'
+Parsed APRS frame: N7HQB>CQ,RS0ISS*:HELLO VIA THE ISS
+APRS Packet: <BeaconPacket: N7HQB>
+Source: N7HQB
+Destination: CQ
+Path: RS0ISS*
+Timestamp: None
+Info: ELLO VIA THE ISS
+
+----New data----
+Raw data from KISS: b'\x00\x82\xa0\xa4\xa6@@`\x96l\x96\x9a\x82@h\xa4\xa6`\x92\xa6\xa6\xe1\x03\xf0=3349.51N/11806.91W-\r'
+Parsed APRS frame: K6KMA-4>APRS,RS0ISS*:=3349.51N/11806.91W-
+APRS Packet: <PositionPacket: K6KMA-4>
+Source: K6KMA-4
+Destination: APRS
+Path: RS0ISS*
+Timestamp: None
+Info: 3349.51N/11806.91W-
+Exiting...
