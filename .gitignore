@@ -6,6 +6,13 @@ __pycache__/
 # C extensions
 *.so
 
+#Ignores Notepad++ backups
+*.bak
+
+# This rule ignores IntelliJ IDEA directories and files
+**/.idea
+*.iml
+
 # Distribution / packaging
 .Python
 build/
