@@ -3,7 +3,7 @@ import kiss
 import aprspy
 import sys, subprocess
 import threading
-import keyboard
+import time
 
 def p(x): 
     try:
@@ -38,14 +38,16 @@ def startWavFile(potato):
 def main():
     newThread = threading.Thread(target= startWavFile, args=(2,))
     newThread.start()
+    time.sleep(0.5)
     ki = kiss.TCPKISS(host='localhost', port=8001)
     ki.start()
     
-    while (not keyboard.is_pressed('q')):
+    while True:#(not keyboard.is_pressed('q')):
         ki.read(callback=p)
     
     print("Exiting...")
     newThread.join()
+    ki.stop()
     
 
 if __name__ == '__main__':
