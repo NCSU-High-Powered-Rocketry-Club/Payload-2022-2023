@@ -18,9 +18,10 @@ GPIO.setup(antenna_2_pin, GPIO.OUT)
 antenna_num = 1
 # antenna_num = 2
 
+#NOTE: Relay activates on LOW, i.e. FALSE
 if antenna_num == 1:
-    GPIO.output(antenna_2_pin, False)
-    GPIO.output(antenna_1_pin, True)
-elif antenna_num == 2:
-    GPIO.output(antenna_1_pin, False)
     GPIO.output(antenna_2_pin, True)
+    GPIO.output(antenna_1_pin, False)
+elif antenna_num == 2:
+    GPIO.output(antenna_1_pin, True)
+    GPIO.output(antenna_2_pin, False)
