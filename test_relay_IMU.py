@@ -1,10 +1,10 @@
 import RPi.GPIO as GPIO
-import BNOInterface.py
+import BNOInterface
 
 # these are the pins we are connecting the antennas to
 # TODO: Add which pins we are connecting to IN1 and IN2 on the relay
 def main():
-    sensor = BNOInterface()
+    sensor = BNOInterface.BNOInterface()
     antenna_1_pin = 11
     antenna_2_pin = 13
 
@@ -18,7 +18,7 @@ def main():
 
     #setup orientation determination
     angle = 0
-    angle = sensor.get_euler()[3] #using the z-axis euler angle to determine orientation
+    angle = sensor.get_euler()[2] #using the z-axis euler angle to determine orientation
 
     if angle in range(0, 135):
         antenna_num = 1
