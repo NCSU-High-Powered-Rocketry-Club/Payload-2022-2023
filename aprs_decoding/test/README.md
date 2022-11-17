@@ -11,7 +11,7 @@ Direwolf is a software replacement for a TNC and it's pretty sweet
 # how run?
 kissTest.py is what is currently working. It prints out aprs signals from a .wav file (hardcoded at the moment). 
 
-To get live audio, replace the `sox (stuff) | and so on` command with `rtl_fm -f 144.39M -s 48000 -o 4 - | and so on` one and it should work
+To get live audio, replace the `sox -t wav ISSpkt_full.wav -esigned-integer -b 16 -r 48000 -t raw - |` command with `rtl_fm -f 144.39M -s 48000 -o 4 - | and so on` one and it should work
 > more info here https://github.com/wb2osz/direwolf/blob/master/doc/Raspberry-Pi-SDR-IGate.pdf
 If you are using 9600 baud you replace -B 1200 in the direwolf command with `-B 9600`
 
