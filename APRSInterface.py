@@ -22,26 +22,22 @@ class APRSInterface:
     def startRecv(self):
         self.running = True
 
-<<<<<<< HEAD
+
+        # Start Direwolf TNC and rtl_fm 
         print("Starting direwolf thread")
         self.recvThread = threading.Thread(target=self.direwolfRecvThread)
-=======
-        # Start Direwolf TNC and rtl_fm
-        self.recvThread = threading.Thread(target=direwolfRecvThread)
->>>>>>> a881817cd8a0a6e2d720be4b440e364f77cd6400
+
         self.recvThread.start()
 
         # Wait for TCP socket to start up 
         # (current value is just a rough estimate)
         time.sleep(0.8)
 
-<<<<<<< HEAD
+
+        # Start data parsing thread
         print("Starting kiss thread")
         self.kissThread = threading.Thread(target=self.kissParseThread)
-=======
-        # Start data parsing thread
-        self.kissThread = threading.Thread(target=kissParseThread)
->>>>>>> a881817cd8a0a6e2d720be4b440e364f77cd6400
+
         self.kissThread.start()
 
     def direwolfRecvThread(self):
