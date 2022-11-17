@@ -1,51 +1,61 @@
-import aprs
-import kiss
+import aprs_decoding.test.aprs as aprs
+import aprs_decoding.test.kiss as kiss
 import aprspy
-import sys, subprocess
+import subprocess
 import threading
 import time
 
 class APRSInterface:
-    def __init__():
+    def __init__(self):
         pass
 
-    def stop():
+    def stop(self):
         self.running = False
 
+        print("shutting down...")
+
         self.recvThread.join()
+        print("Direwolf thread shutdown")
         self.kissThread.join()
+        print("Kiss thread shutdown")
 
     def startRecv(self):
         self.running = True
 
-        self.recvThread = threading.Thread(target=direwolfRecvThread)
+        print("Starting direwolf thread")
+        self.recvThread = threading.Thread(target=self.direwolfRecvThread)
         self.recvThread.start()
 
         time.sleep(0.8)
 
-        self.kissThread = threading.Thread(target=kissParseThread)
+        print("Starting kiss thread")
+        self.kissThread = threading.Thread(target=self.kissParseThread)
         self.kissThread.start()
 
     def direwolfRecvThread(self):
         command = 'rtl_fm -f 445.15M -s 48000 -o 4 - | direwolf -B 1200 -c direwolf.conf -b 16 -n 1 -r 48000 -a 0 -'
-        proc = subprocess.call(command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+        proc = subprocess.Popen(command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+
+        while self.running:
+            pass
+
+        proc.terminate()
 
     def kissParseThread(self):
         self.ki = kiss.TCPKISS(host='localhost', port=8001)
         self.ki.start()
 
         while self.running:
-            ki.read(callback=printPacket)
+           self.ki.read(callback=self.printPacket)
 
-        ki.stop()
+        self.ki.stop()
 
     def printPacket(packet):
         try:
             print("\n----New data----")
-            print("Raw data from KISS: "+str(x))
-            data = x
+            print("Raw data from KISS: "+str(packet))
             
-            newFrame = aprs.parse_frame(data)
+            newFrame = aprs.parse_frame(packet)
             
             print("Parsed APRS frame: "+ str(newFrame))
             
