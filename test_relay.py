@@ -15,7 +15,7 @@ GPIO.setup(antenna_1_pin, GPIO.OUT)
 GPIO.setup(antenna_2_pin, GPIO.OUT)
 
 # TODO: add code here to determine the antenna
-antenna_num = 1 
+antenna_num = 1
 # antenna_num = 2
 
 #NOTE: Relay activates on LOW, i.e. FALSE
