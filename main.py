@@ -1,11 +1,25 @@
 import RPi.GPIO as GPIO
+from enum import Enum
 from BNOInterface import BNOInterface
+import time
 
 # Necessary to prevent import issues on APRSInterface
 import sys
 sys.path.append("./aprs_decoding/test")
 
 from APRSInterface import APRSInterface
+
+# rocket state
+class State(Enum):
+    STANDBY = 0
+    LAUNCH = 1
+    LANDING = 2
+
+# time from launch to landing, in seconds
+DESCENT_TIME = 100
+
+# amount of values to collect for rolling launch detect average
+AVERAGE_COUNT = 250
 
 # these are the GPIO pins we are controlling the relay switch with
 ANTENNA_1_PIN = 17
@@ -16,6 +30,8 @@ def main():
 
     sensor = BNOInterface()
 
+    state = State.STANDBY
+
     # setup board
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
@@ -24,13 +40,41 @@ def main():
     GPIO.setup(ANTENNA_1_PIN, GPIO.OUT)
     GPIO.setup(ANTENNA_2_PIN, GPIO.OUT)
 
+    # launch detection
+    accelerations = [0] * AVERAGE_COUNT
+    idx = 0
+
+    while state is State.STANDBY:
+        accel = sensor.get_linear_acceleration()
+        # print(accel)
+        if accel != (None, None, None):
+            accelerations[idx] = abs(accel[0])
+
+            idx = (idx+1) % AVERAGE_COUNT
+
+            average_accel = sum(accelerations) / AVERAGE_COUNT
+            # print(average_accel)
+
+            if average_accel > 3:
+                state = State.LAUNCH
+
+    print("LIFTOFF DETECTED")
+
+    # delay for descent time
+    delayStart = time.time()
+    while state is State.LAUNCH:
+        if delayStart + DESCENT_TIME < time.time():
+            state = State.LANDING
+
+    print("LANDED! Choosing antenna...")
+
     choose_antenna(sensor)
 
     aprs_interface.startRecv()
 
     try:
         while True:
-            choose_antenna(sensor)
+            pass
     except KeyboardInterrupt:
         pass
 
