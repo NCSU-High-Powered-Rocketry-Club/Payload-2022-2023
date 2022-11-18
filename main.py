@@ -16,7 +16,7 @@ class State(Enum):
     LANDING = 2
 
 # time from launch to landing, in seconds
-DESCENT_TIME = 100
+DESCENT_TIME = 10
 
 # amount of values to collect for rolling launch detect average
 AVERAGE_COUNT = 250
@@ -74,7 +74,7 @@ def main():
 
     try:
         while True:
-            pass
+            choose_antenna(sensor)
     except KeyboardInterrupt:
         pass
 
@@ -85,38 +85,37 @@ def choose_antenna(sensor: BNOInterface):
     #setup orientation determination
 
     gravity = sensor.get_gravity()
-    print(f'Gravity: {gravity}')
+    # print(f'Gravity: {gravity}')
 
     # antenna 1 , IMU UP or IMU rotated 90 degrees CCW from up position
     # (looking at the bulkhead from the aft posiiton)
+    # skip none type gravity
+    try:
+        gravity[2] > 0
+    except:
+        return
 
     # choose antenna 2
     if gravity[2] > 8.5 or gravity[1] < -8.5:
         # set output pins to output
-        GPIO.setup(ANTENNA_1_PIN, GPIO.OUT)
-        GPIO.setup(ANTENNA_2_PIN, GPIO.OUT)
         GPIO.output(ANTENNA_1_PIN, True)
         GPIO.output(ANTENNA_2_PIN, False)
 
-        print("Chose antenna 2")
+        # print("Chose antenna 2")
 
     # choose antenna 1
     elif gravity[2] < -8.5 or gravity[1] < 8.5:
         # set output pins to output
-        GPIO.setup(ANTENNA_1_PIN, GPIO.OUT)
-        GPIO.setup(ANTENNA_2_PIN, GPIO.OUT)
         GPIO.output(ANTENNA_2_PIN, True)
         GPIO.output(ANTENNA_1_PIN, False)
 
-        print("Chose antenna 1")
+        # print("Chose antenna 1")
     else:
-        GPIO.setup(ANTENNA_1_PIN, GPIO.OUT)
-        GPIO.setup(ANTENNA_2_PIN, GPIO.OUT)
         GPIO.output(ANTENNA_2_PIN, True)
         GPIO.output(ANTENNA_1_PIN, False)
 
-        print(f"Error reading gravity data: {gravity}")
-        print("Chose antenna 1")
+        # print(f"Error reading gravity data: {gravity}")
+        # print("Chose antenna 1")
 
 if __name__ == "__main__":
     main()

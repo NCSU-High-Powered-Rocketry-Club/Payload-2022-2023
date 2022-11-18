@@ -69,9 +69,9 @@ class APRSInterface:
            self.ki.read(callback=self.printPacket)
 
         # Stop when done
-        ki.stop()
+        self.ki.stop()
 
-    def printPacket(raw_data):
+    def printPacket(self,raw_data):
         try:
             print("\n----New data----")
             print("Raw data from KISS: "+str(raw_data))
