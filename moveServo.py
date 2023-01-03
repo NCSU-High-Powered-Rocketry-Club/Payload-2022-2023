@@ -1,8 +1,6 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-pinnum = 11
-
 # Set up GPIO mode as BOARD to reference the pin numbers
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(pinnum, GPIO.OUT) #This number refers to the pin the servo is connected to
