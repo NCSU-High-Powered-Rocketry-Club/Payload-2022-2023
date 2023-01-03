@@ -2,6 +2,7 @@ import RPi.GPIO as GPIO
 from enum import Enum
 from BNOInterface import BNOInterface
 import time
+from PIL import Image
 
 # Necessary to prevent import issues on APRSInterface
 import sys
@@ -24,6 +25,12 @@ AVERAGE_COUNT = 250
 # these are the GPIO pins we are controlling the relay switch with
 ANTENNA_1_PIN = 17
 ANTENNA_2_PIN = 27
+
+# these are the commands to select each camera
+CAMERA_A = [0, 0, 1]
+CAMERA_B = [1, 0, 1]
+CAMERA_C = [0, 1, 0]
+CAMERA_D = [1, 1, 0]
 
 def main():
     aprs_interface = APRSInterface()
@@ -119,3 +126,28 @@ def choose_antenna(sensor: BNOInterface):
 
 if __name__ == "__main__":
     main()
+
+def choose_camera():
+    # gravity stuff here, like above
+    return 1
+
+def activate_camera(camera_number):
+    # Tell the chosen camera to capture images
+    camera_choice = CAMERA_C
+    # send commands to camera_choice using GPIO 7, 11, 12 on Pi
+    if camera_number == 1:
+        # do some GPIO stuff
+        return
+
+def applyfilter(): # This calls imageFilter module
+    import imageFilter
+    image = Image.open('pic.jpg')
+    image_data = image.load()
+    height,width = image.size
+    imageFilter.fry(image) # This is a placeholder, replace w random number generator
+
+num = choose_camera()
+
+activate_camera(num)
+
+applyfilter()
