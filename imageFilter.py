@@ -1,5 +1,6 @@
 from PIL import Image
 from PIL import ImageDraw
+from PIL import ImageFont
 import deeppyer, asyncio
 
 def grassless(image,image_data,height,width):
@@ -11,7 +12,8 @@ def grassless(image,image_data,height,width):
 
 def meme(image,height,width):
     I1 = ImageDraw.Draw(image)
-    I1.text((0.25*height, 0.25*width),"poo", fill=(255,0,0))
+    meme_font = ImageFont.truetype('impact.ttf', 200)
+    I1.text((0.2*width, 0.1*height),'THIS IS A MEME.', fill=(0,0,0), font=meme_font)
     image.save('meme.jpg')
 
 async def fry(image):
