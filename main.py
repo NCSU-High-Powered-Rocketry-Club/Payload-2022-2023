@@ -139,6 +139,8 @@ def activate_camera(camera_number):
         # do some GPIO stuff
         return
 
+
+# If RAFCO system receives command G7, choose randomly from 3 image effects (fry, grassless, and meme)
 def applyfilter(): # This calls imageFilter module
     import imageFilter
     image = Image.open('pic.jpg')
@@ -151,3 +153,7 @@ num = choose_camera()
 activate_camera(num)
 
 applyfilter()
+
+# If RAFCO system receives command F6, rotate image 180 degrees
+import imageFilter
+image = imageFilter.rotate180(image)
