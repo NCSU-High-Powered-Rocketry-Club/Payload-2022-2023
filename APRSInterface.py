@@ -103,8 +103,11 @@ class APRSInterface:
 
             # Print message if this is a message packet
             # (there may be a better way to check packet type, but this works)
+            # Create a global variable aprsMsg that can be used to execute cmds
             if str(packet).startswith("<MessagePacket"):
                 logMsgs.append("Message: " + str(packet.message))
+                aprsMsg = []
+                aprsMsg.append(str(packet.message))
 
             # Join all the messages together and log it as one debug message
             logging.debug("\n".join(logMsgs))
