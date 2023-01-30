@@ -1,6 +1,11 @@
 #from PIL import Image
 import imageFilter
 import random
+import re
+import time
+start_time = time.time()
+print("--- %s seconds ---" % (time.time() - start_time))
+
 example_APRS = "XX4XXX C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
 
 print(type(example_APRS))
@@ -8,6 +13,9 @@ print(type(example_APRS))
 APRS_clip = example_APRS[7:]
 
 print(APRS_clip)
+
+
+print("--- %s seconds ---" % (time.time() - start_time))
 
 x = 0
 
