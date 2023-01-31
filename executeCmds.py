@@ -6,16 +6,26 @@ import re
 #example_APRS = "XX4XXX C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
 #APRS_clip = aprsMsg[7:]
 
-def executeCmds(APRS_clip):
+def executeCmds(APRS_clip, cam):
+    import Servo #idk if I should put this here or at beginning of this file
+    servo = Servo() # Define class Servo in this file
     x = 0
+    cam.color_effects = None
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
-            # Save the previously captured image if there is one (ie if x ~=0)
-            # Turn servo 60deg to the right
+            if x != 0:
+                # Save the previously captured image if there is one
+                return 1
+            else:
+                servo.degrees_to_pos(self, 60) #need to define GPIO pins the servo's attached to
             print("A1")
         elif APRS_clip[x] == "B":
-            # Save the previously captured image if there is one (ie if x ~=0)
-            # Turn servo 60deg to the left
+            if x != 0:
+                # Save the previously captured image if there is one
+                return 1
+            else:
+                # Turn servo 60deg to the left
+                servo.degrees_to_pos(self, -60) #need to define GPIO pins the servo's attached to
             print("B2")
         elif APRS_clip[x] == "C":
             # Save the previously captured image if there is one (ie if x ~=0)
@@ -24,9 +34,11 @@ def executeCmds(APRS_clip):
             print("C3")
         elif APRS_clip[x] == "D":
             # Change camera mode from grayscale to color
+            cam.color_effects = None
             print("D4")
         elif APRS_clip[x] == "E":
             # Change camera mode from color to grayscale
+            cam.color_effects = (128, 128)
             print("E5")
         elif APRS_clip[x] == "F":
             # Rotate image 180deg
