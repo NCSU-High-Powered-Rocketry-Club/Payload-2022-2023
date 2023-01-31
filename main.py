@@ -83,6 +83,8 @@ def main():
     try:
         while True:
             choose_antenna(sensor)
+            if len(aprs_interface.aprsMsg) > 0:
+                break
     except KeyboardInterrupt:
         pass
 
@@ -91,7 +93,7 @@ def main():
     # Need to check that the callsign is actually from NASA; must add that here
     # The index of 7 takes out the callsign
     # Execute the commands for the camera unit
-    APRS_clip = aprs_interface.aprsMsg[7:]
+    APRS_clip = aprs_interface.aprsMsg.pop()[7:]
     executeCmds.executeCmds(APRS_clip, camGirl)
 
 

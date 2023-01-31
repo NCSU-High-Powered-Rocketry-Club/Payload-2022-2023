@@ -16,6 +16,7 @@ class APRSInterface:
             logging.StreamHandler()
         ], level=logging.DEBUG,
             format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+        self.aprsMsg = []
 
     def stop(self):
         self.running = False
@@ -106,7 +107,6 @@ class APRSInterface:
             # Create a global variable aprsMsg that can be used to execute cmds
             if str(packet).startswith("<MessagePacket"):
                 logMsgs.append("Message: " + str(packet.message))
-                self.aprsMsg = []
                 self.aprsMsg.append(str(packet.message))
 
             # Join all the messages together and log it as one debug message
