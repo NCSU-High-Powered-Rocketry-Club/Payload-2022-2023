@@ -4,7 +4,7 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(18,GPIO.OUT)
-pwm = GPIO.PWM(18, 50)
+pwm = GPIO.PWM(18, 490)
 pwm.start(50)
 
 def testServo():
