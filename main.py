@@ -92,7 +92,7 @@ def main():
     # The index of 7 takes out the callsign
     # Execute the commands for the camera unit
     APRS_clip = aprs_interface.aprsMsg[7:]
-    executeCmds.executeCmds(APRS_clip, cam)
+    executeCmds.executeCmds(APRS_clip, camGirl)
 
 
 def choose_antenna(sensor: BNOInterface):
