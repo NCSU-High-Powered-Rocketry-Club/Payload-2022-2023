@@ -3,6 +3,7 @@ from enum import Enum
 from BNOInterface import BNOInterface
 import time
 from PIL import Image
+import executeCmds
 
 # Necessary to prevent import issues on APRSInterface
 import sys
@@ -87,6 +88,13 @@ def main():
 
     aprs_interface.stop()
 
+    # Need to check that the callsign is actually from NASA; must add that here
+    # The index of 7 takes out the callsign
+    # Execute the commands for the camera unit
+    APRS_clip = aprs_interface.aprsMsg[7:]
+    executeCmds.executeCmds(APRS_clip)
+
+
 def choose_antenna(sensor: BNOInterface):
 
     #setup orientation determination
@@ -127,9 +135,12 @@ def choose_antenna(sensor: BNOInterface):
 if __name__ == "__main__":
     main()
 
-def choose_camera():
+def choose_cameraUnit():
+    # Choose both camera and servo
     # gravity stuff here, like above
-    return 1
+    cameraChoice = [0, 0, 0] # This isn't an actual cam, replace w/ 1x3 array
+    servoChoice = [0, 0, 0]
+    return cameraChoice, servoChoice
 
 def activate_camera(camera_number):
     # Tell the chosen camera to capture images
@@ -147,6 +158,10 @@ def applyfilter(): # This calls imageFilter module
     image_data = image.load()
     height,width = image.size
     imageFilter.fry(image) # This is a placeholder, replace w random number generator
+
+#Pull out aprs msgs and pass those msgs to executeCmds.py
+def execute():
+    return 1
 
 num = choose_camera()
 
