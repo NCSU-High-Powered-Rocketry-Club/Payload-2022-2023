@@ -9,8 +9,10 @@ pwm.start(50)
 
 def testServo():
     pwm.ChangeDutyCycle(0)
+    print('0')
     time.sleep(3)
     pwm.ChangeDutyCycle(100)
+    print('100')
     time.sleep(3)
 
 while True:
