@@ -1,4 +1,4 @@
-import Servo
+from Servo import Servo
 import time
 
 def testServo():
