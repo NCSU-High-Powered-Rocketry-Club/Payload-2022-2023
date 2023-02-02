@@ -3,8 +3,8 @@ from Servo import Servo
 import time
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(18,GPIO.OUT)
-pwm = GPIO.PWM(18, 490)
+GPIO.setup(19,GPIO.OUT)
+pwm = GPIO.PWM(19, 490)
 pwm.start(50)
 
 def testServo():
