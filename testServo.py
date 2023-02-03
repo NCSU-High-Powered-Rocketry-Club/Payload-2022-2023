@@ -9,11 +9,7 @@ pwm.start(0)
 
 def testServo():
     print('0')
-    pwm.ChangeDutyCycle(5)
-    print('5')
-    pwm.ChangeDutyCycle(7.5)
-    print(7.5)
-    pwm.ChangeDutyCycle(10)
+    pwm.ChangeDutyCycle(100)
 
 while True:
     testServo()
