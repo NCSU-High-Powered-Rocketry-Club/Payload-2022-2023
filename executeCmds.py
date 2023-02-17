@@ -3,6 +3,7 @@ import imageFilter
 import random
 import re
 import Servo
+import takepic
 
 #example_APRS = "XX4XXX C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
 #APRS_clip = aprsMsg[7:]
@@ -31,6 +32,7 @@ def executeCmds(APRS_clip, cam):
             # Save the previously captured image if there is one (ie if x ~=0)
             # Take picture
             #image = Image.open("pic.jpg") # Placeholder for actual captured image
+            takepic.takepic(cam)
             print("C3")
         elif APRS_clip[x] == "D":
             # Change camera mode from grayscale to color
