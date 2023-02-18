@@ -27,12 +27,6 @@ AVERAGE_COUNT = 250
 ANTENNA_1_PIN = 17
 ANTENNA_2_PIN = 27
 
-# these are the commands to select each camera
-CAMERA_A = [0, 0, 1]
-CAMERA_B = [1, 0, 1]
-CAMERA_C = [0, 1, 0]
-CAMERA_D = [1, 1, 0]
-
 def main():
     aprs_interface = APRSInterface()
 
@@ -83,6 +77,7 @@ def main():
     try:
         while True:
             choose_antenna(sensor)
+            cam_choice = choose_antenna(sensor)
             if len(aprs_interface.aprsMsg) > 0:
                 break
     except KeyboardInterrupt:
@@ -94,7 +89,7 @@ def main():
     # The index of 7 takes out the callsign
     # Execute the commands for the camera unit
     APRS_clip = aprs_interface.aprsMsg.pop()[7:]
-    executeCmds.executeCmds(APRS_clip, camGirl)
+    executeCmds.executeCmds(APRS_clip, cam_choice)
 
 
 def choose_antenna(sensor: BNOInterface):
@@ -118,6 +113,10 @@ def choose_antenna(sensor: BNOInterface):
         GPIO.output(ANTENNA_1_PIN, True)
         GPIO.output(ANTENNA_2_PIN, False)
 
+        if gravity[1] < -1 and gravity[2] < -1:
+            cam_choice = "big"
+        elif gravity[1] > 1 and gravity[2] < -1:
+            cam_choice = "jahn"
         # print("Chose antenna 2")
 
     # choose antenna 1
@@ -125,52 +124,23 @@ def choose_antenna(sensor: BNOInterface):
         # set output pins to output
         GPIO.output(ANTENNA_2_PIN, True)
         GPIO.output(ANTENNA_1_PIN, False)
-
         # print("Chose antenna 1")
+
+        if gravity[1] > 1 and gravity[2] > 1:
+            cam_choice = "pinky"
+        elif gravity[1] < -1 and gravity[2] > 1:
+            cam_choice = "ring"
+        # need an if statement for the in-between gravity
+
     else:
         GPIO.output(ANTENNA_2_PIN, True)
         GPIO.output(ANTENNA_1_PIN, False)
 
+        cam_choice = "big"
+
         # print(f"Error reading gravity data: {gravity}")
         # print("Chose antenna 1")
+    return cam_choice
 
 if __name__ == "__main__":
     main()
-
-def choose_cameraUnit():
-    # Choose both camera and servo
-    # gravity stuff here, like above
-    cameraChoice = [0, 0, 0] # This isn't an actual cam, replace w/ 1x3 array
-    servoChoice = [0, 0, 0]
-    return cameraChoice, servoChoice
-
-def activate_camera(camera_number):
-    # Tell the chosen camera to capture images
-    camera_choice = CAMERA_C
-    # send commands to camera_choice using GPIO 7, 11, 12 on Pi
-    if camera_number == 1:
-        # do some GPIO stuff
-        return
-
-
-# If RAFCO system receives command G7, choose randomly from 3 image effects (fry, grassless, and meme)
-def applyfilter(): # This calls imageFilter module
-    import imageFilter
-    image = Image.open('pic.jpg')
-    image_data = image.load()
-    height,width = image.size
-    imageFilter.fry(image) # This is a placeholder, replace w random number generator
-
-#Pull out aprs msgs and pass those msgs to executeCmds.py
-def execute():
-    return 1
-
-num = choose_camera()
-
-activate_camera(num)
-
-applyfilter()
-
-# If RAFCO system receives command F6, rotate image 180 degrees
-import imageFilter
-image = imageFilter.rotate180(image)

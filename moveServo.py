@@ -10,7 +10,7 @@ pwm = GPIO.PWM(19, 333)
 # pwm = GPIO.PWM(19, 500)
 pwm.start(0)
 
-def testServo():
+def moveServo(deg):
     print('0')
     pwm.ChangeDutyCycle(10)
     time.sleep(1)
