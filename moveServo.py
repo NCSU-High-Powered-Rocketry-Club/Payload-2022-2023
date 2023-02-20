@@ -2,15 +2,44 @@ import RPi.GPIO as GPIO
 from Servo import Servo
 import time
 
-#Pain
-
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(19,GPIO.OUT)
-pwm = GPIO.PWM(19, 333)
+pwm = GPIO.PWM(19, 500)
 # pwm = GPIO.PWM(19, 500)
 pwm.start(0)
 
-def moveServo(deg):
+def moveServo(deg, servo):
+    GPIO.setmode(GPIO.BOARD)
+    if servo == "big":
+        GPIO.setup(19,GPIO.OUT)
+        pwm = GPIO.PWM(19, 500)
+        pwm.start(0)
+        pwm.ChangeDutyCycle(deg)
+        time.sleep(1)
+        pwm.stop()
+    elif servo == "jahn":
+        GPIO.setup(21,GPIO.OUT)
+        pwm = GPIO.PWM(21, 500)
+        pwm.start(0)
+        pwm.ChangeDutyCycle(deg)
+        time.sleep(1)
+        pwm.stop()
+    elif servo == "pinky":
+        GPIO.setup(23,GPIO.OUT)
+        pwm = GPIO.PWM(23, 500)
+        pwm.start(0)
+        pwm.ChangeDutyCycle(deg)
+        time.sleep(1)
+        pwm.stop()
+    elif servo == "ring":
+        GPIO.setup(22,GPIO.OUT)
+        pwm = GPIO.PWM(22, 500)
+        pwm.start(0)
+        pwm.ChangeDutyCycle(deg)
+        time.sleep(1)
+        pwm.stop()
+    else:
+        print('No servo selected')
     print('0')
     pwm.ChangeDutyCycle(10)
     time.sleep(1)
