@@ -8,79 +8,81 @@ pwm = GPIO.PWM(19, 500)
 # pwm = GPIO.PWM(19, 500)
 pwm.start(0)
 
+# Tweak this number until it turns good
+DEG_TO_NS = 0.1 * 1_000_000_000
+
 def moveServo(deg, servo):
     GPIO.setmode(GPIO.BOARD)
+    pin = 0
     if servo == "big":
-        GPIO.setup(19,GPIO.OUT)
-        pwm = GPIO.PWM(19, 500)
-        pwm.start(0)
-        pwm.ChangeDutyCycle(deg)
-        time.sleep(1)
-        pwm.stop()
+        pin = 19
     elif servo == "jahn":
-        GPIO.setup(21,GPIO.OUT)
-        pwm = GPIO.PWM(21, 500)
-        pwm.start(0)
-        pwm.ChangeDutyCycle(deg)
-        time.sleep(1)
-        pwm.stop()
+        pin = 21
     elif servo == "pinky":
-        GPIO.setup(23,GPIO.OUT)
-        pwm = GPIO.PWM(23, 500)
-        pwm.start(0)
-        pwm.ChangeDutyCycle(deg)
-        time.sleep(1)
-        pwm.stop()
+        pin = 23
     elif servo == "ring":
-        GPIO.setup(22,GPIO.OUT)
-        pwm = GPIO.PWM(22, 500)
-        pwm.start(0)
-        pwm.ChangeDutyCycle(deg)
-        time.sleep(1)
-        pwm.stop()
+        pin = 22
     else:
         print('No servo selected')
-    print('0')
-    pwm.ChangeDutyCycle(10)
-    time.sleep(1)
-    print('0.5')
-    pwm.ChangeDutyCycle(50)
-    time.sleep(1)
-    print('1')
-    pwm.ChangeDutyCycle(90)
-    time.sleep(1)
+        return
+    
+    GPIO.setup(pin,GPIO.OUT)
+    pwm = GPIO.PWM(pin, 500)
+
+    pwm.start(0)
+
+    # todo after launch make not get tangled
+
+    # Todo make this number turn the right way
+    turn_number = 10
+
+    if deg < 0:
+        deg = -deg
+        turn_number = 90 # Todo make this number turn the right way
+
+    pwm.ChangeDutyCycle(turn_number)
+    better_sleep(DEG_TO_NS * deg)
+
+    pwm.stop()
 
 def turn_to_second(turns):
     # return turns * 0.4453 # one rotation at 500hz
     return turns * 0.4453
 
-while True:
-    # pwm.ChangeDutyCycle(int(input()))
-    # s = turn_to_second(int(input()))
-    # pwm.ChangeDutyCycle(10)
-    # time.sleep(s)
-    # pwm.ChangeDutyCycle(0)
-    # testServo()
+def better_sleep(ns):
+    start = time.time_ns()
+    while True:
+        if (time.time_ns() - start) > s:
+            break
 
-    # Stress test
-    if True:
-        s = turn_to_second(1) * 1_000_000_000
-        # s = 1 * 1_000_000_000
-        pwm.ChangeDutyCycle(10)
-        start = time.time_ns()
-        while True:
-            if (time.time_ns() - start) > s:
-                break
-        pwm.ChangeDutyCycle(0)
-        time.sleep(0.5)
+if __name__ == "__main__":
+    while True:
+        # pwm.ChangeDutyCycle(int(input()))
+        # s = turn_to_second(int(input()))
+        # pwm.ChangeDutyCycle(10)
+        # time.sleep(s)
+        # pwm.ChangeDutyCycle(0)
+        # testServo()
 
-        pwm.ChangeDutyCycle(90)
-        start = time.time_ns()
-        while True:
-            if (time.time_ns() - start) > s:
-                break
-        pwm.ChangeDutyCycle(0)
-        time.sleep(0.5)
+        # Stress test
+        if True:
+            s = turn_to_second(1) * 1_000_000_000
+            # s = 1 * 1_000_000_000
+            pwm.ChangeDutyCycle(10)
+            start = time.time_ns()
+            while True:
+                if (time.time_ns() - start) > s:
+                    break
+            pwm.ChangeDutyCycle(0)
+            time.sleep(0.5)
 
-    # 40 turns in 20.82 seconds
+            pwm.ChangeDutyCycle(90)
+            start = time.time_ns()
+            while True:
+                if (time.time_ns() - start) > s:
+                    break
+            pwm.ChangeDutyCycle(0)
+            time.sleep(0.5)
+
+        # 40 turns in 20.82 seconds
 
