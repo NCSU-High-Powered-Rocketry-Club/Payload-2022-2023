@@ -45,3 +45,5 @@ def executeServo():
         else:
             print("You done fucked up chief")
         x = x + 3
+
+executeServo()
