@@ -57,7 +57,7 @@ class APRSInterface:
         # And use rtl_fm -f 445.15M -s 48000 -o 4 - |
         # to read from the RTL-SDR, where 445.15 is the center frequency in MHz
 
-        command = 'rtl_fm -f 144.90M -s 48000 -o 4 - | direwolf -B 1200 -c direwolf.conf -b 16 -n 1 -r 48000 -a 0 -'
+        command = 'rtl_fm -f 144.39M -s 48000 -o 4 - | direwolf -B 1200 -c direwolf.conf -b 16 -n 1 -r 48000 -a 0 -'
         proc = subprocess.Popen(
             command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 
