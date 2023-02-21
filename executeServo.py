@@ -16,6 +16,8 @@ def executeServo():
     APRS_clip = "C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
     cam = "pinky"
     x = 0
+    print("Running")
+    moveServo(60, "pinky")
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
             moveServo(60,cam)
