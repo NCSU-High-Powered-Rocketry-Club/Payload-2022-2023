@@ -19,7 +19,7 @@ def moveServo(deg, servo):
     elif servo == "jahn":
         pin = 21
     elif servo == "pinky":
-        pin = 23
+        pin = 33
     elif servo == "ring":
         pin = 22
     else:

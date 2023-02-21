@@ -84,12 +84,12 @@ def main():
         pass
 
     aprs_interface.stop()
-    print("%s" % aprs_interface.aprsMsg.pop()[7:])
+    print("%s" % aprs_interface.aprsMsg[0][7:])
 
     # Need to check that the callsign is actually from NASA; must add that here
     # The index of 7 takes out the callsign
     # Execute the commands for the camera unit
-    APRS_clip = aprs_interface.aprsMsg.pop()[7:]
+    APRS_clip = aprs_interface.aprsMsg[0][7:]
     #executeCmds.executeCmds(APRS_clip, cam_choice)
 
 
