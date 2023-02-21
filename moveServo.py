@@ -3,10 +3,10 @@ from Servo import Servo
 import time
 
 #GPIO.setmode(GPIO.BOARD)
-GPIO.setup(19,GPIO.OUT)
-pwm = GPIO.PWM(19, 500)
+#GPIO.setup(19,GPIO.OUT)
+#pwm = GPIO.PWM(19, 500)
 # pwm = GPIO.PWM(19, 500)
-pwm.start(0)
+#pwm.start(0)
 
 # Tweak this number until it turns good
 DEG_TO_NS = 0.1 * 1_000_000_000
