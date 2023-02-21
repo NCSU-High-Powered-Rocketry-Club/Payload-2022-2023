@@ -98,7 +98,7 @@ def choose_antenna(sensor: BNOInterface):
     #setup orientation determination
 
     gravity = sensor.get_gravity()
-    # print(f'Gravity: {gravity}')
+    print(f'Gravity: {gravity}')
 
     # antenna 1 , IMU UP or IMU rotated 90 degrees CCW from up position
     # (looking at the bulkhead from the aft posiiton)
