@@ -2,7 +2,6 @@ import RPi.GPIO as gp
 import os
 
 gp.setwarnings(False)
-gp.setmode(gp.BOARD)
 
 gp.setup(7, gp.OUT)
 gp.setup(11, gp.OUT)
@@ -47,8 +46,3 @@ def takepic(topcam, x):
 def capture(cam,x):
     cmd = "libcamera-still -o capture_%s_%d.jpg" % (cam, x)
     os.system(cmd)
-
-takepic("big")
-gp.output(7, False)
-gp.output(11, False)
-gp.output(12, True)
