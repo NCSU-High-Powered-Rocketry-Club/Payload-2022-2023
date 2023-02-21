@@ -117,7 +117,7 @@ def choose_antenna(sensor: BNOInterface):
         if gravity[1] < -1 and gravity[2] < -1:
             cam_choice = "big"
             #print("big")
-        elif gravity[1] > 1 and gravity[2] < -1:
+        else: #gravity[1] > 1 and gravity[2] < -1:
             cam_choice = "jahn"
             #print("jahn")
         # print("Chose antenna 2")
@@ -132,7 +132,7 @@ def choose_antenna(sensor: BNOInterface):
         if gravity[1] > 1 and gravity[2] > 1:
             cam_choice = "pinky"
             #print("pinky")
-        elif gravity[1] < -1 and gravity[2] > 1:
+        else: #gravity[1] < -1 and gravity[2] > 1:
             cam_choice = "ring"
             #print("pinky")
 
