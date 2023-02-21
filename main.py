@@ -84,12 +84,13 @@ def main():
         pass
 
     aprs_interface.stop()
+    print("%s" % aprs_interface.aprsMsg.pop()[7:])
 
     # Need to check that the callsign is actually from NASA; must add that here
     # The index of 7 takes out the callsign
     # Execute the commands for the camera unit
     APRS_clip = aprs_interface.aprsMsg.pop()[7:]
-    executeCmds.executeCmds(APRS_clip, cam_choice)
+    #executeCmds.executeCmds(APRS_clip, cam_choice)
 
 
 def choose_antenna(sensor: BNOInterface):
@@ -115,8 +116,10 @@ def choose_antenna(sensor: BNOInterface):
 
         if gravity[1] < -1 and gravity[2] < -1:
             cam_choice = "big"
+            #print("big")
         elif gravity[1] > 1 and gravity[2] < -1:
             cam_choice = "jahn"
+            #print("jahn")
         # print("Chose antenna 2")
 
     # choose antenna 1
@@ -128,15 +131,17 @@ def choose_antenna(sensor: BNOInterface):
 
         if gravity[1] > 1 and gravity[2] > 1:
             cam_choice = "pinky"
+            #print("pinky")
         elif gravity[1] < -1 and gravity[2] > 1:
             cam_choice = "ring"
-        # need an if statement for the in-between gravity
+            #print("pinky")
 
     else:
         GPIO.output(ANTENNA_2_PIN, True)
         GPIO.output(ANTENNA_1_PIN, False)
 
         cam_choice = "big"
+        #print("No camera chosen")
 
         # print(f"Error reading gravity data: {gravity}")
         # print("Chose antenna 1")
