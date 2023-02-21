@@ -14,21 +14,21 @@ DEG_TO_NS = 0.1 * 1_000_000_000
 def moveServo(deg, servo):
     GPIO.setmode(GPIO.BOARD)
     pin = 0
-    if servo == "big":
-        pin = 19
-    elif servo == "jahn":
-        pin = 21
-    elif servo == "pinky":
-        pin = 33
-    elif servo == "ring":
-        pin = 22
-    else:
-        print('No servo selected')
-        return
+    #if servo == "big":
+    #    pin = 19
+    #elif servo == "jahn":
+    #    pin = 21
+    #elif servo == "pinky":
+    #    pin = 33
+    #elif servo == "ring":
+    #    pin = 22
+    #else:
+    #    print('No servo selected')
+    #    return
     
     GPIO.setup(pin,GPIO.OUT)
     pwm = GPIO.PWM(pin, 500)
-
+    print("starting servo")
     pwm.start(0)
 
     # todo after launch make not get tangled
