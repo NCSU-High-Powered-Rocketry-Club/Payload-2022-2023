@@ -11,7 +11,7 @@ from PIL import Image
 #example_APRS = "XX4XXX C3 E5 C3 D4 C3 F6 B2 C3 B2 C3"
 #APRS_clip = aprsMsg[7:]
 
-def executeCmds():
+def executeServo():
     myServo = Servo(33, 0, 100) # Define class Servo in this file
     APRS_clip = "C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
     cam = "pinky"
