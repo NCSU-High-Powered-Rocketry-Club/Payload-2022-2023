@@ -1,11 +1,11 @@
 #from PIL import Image
-import imageFilter
+#import imageFilter
 import random
 import re
 import Servo
-import takepic
+#import takepic
 import moveServo
-from PIL import Image
+#from PIL import Image
 
 #example_APRS = "XX4XXX C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
 #example_APRS = "XX4XXX C3 E5 C3 D4 C3 F6 B2 C3 B2 C3"
