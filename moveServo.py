@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 from Servo import Servo
 import time
 
-GPIO.setmode(GPIO.BOARD)
+#GPIO.setmode(GPIO.BOARD)
 GPIO.setup(19,GPIO.OUT)
 pwm = GPIO.PWM(19, 500)
 # pwm = GPIO.PWM(19, 500)
