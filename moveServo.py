@@ -13,7 +13,7 @@ DEG_TO_NS = 0.1 * 1_000_000_000
 
 def moveServo(deg, servo):
     GPIO.setmode(GPIO.BOARD)
-    pin = 0
+    pin = 33
     #if servo == "big":
     #    pin = 19
     #elif servo == "jahn":
