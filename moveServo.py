@@ -9,7 +9,7 @@ import time
 #pwm.start(0)
 
 # Tweak this number until it turns good
-DEG_TO_NS = 0.00000001 * 150_000
+DEG_TO_NS = 0.00000001 * 125_000
 
 def moveServo(deg, servo, pwm):
 
