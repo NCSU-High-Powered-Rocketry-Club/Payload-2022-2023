@@ -21,7 +21,7 @@ def executeServo():
     print("Running")
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin,GPIO.OUT)
-    pwm = GPIO.PWM(pin, 500)
+    pwm = GPIO.PWM(pin, 50)
     moveServo.moveServo(60, "pinky", pwm)
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
