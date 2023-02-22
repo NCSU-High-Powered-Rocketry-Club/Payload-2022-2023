@@ -17,13 +17,13 @@ def executeServo():
     cam = "pinky"
     x = 0
     print("Running")
-    moveServo(60, "pinky")
+    moveServo.moveServo(60, "pinky")
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
-            moveServo(60,cam)
+            moveServo.moveServo(60,cam)
             print("A1")
         elif APRS_clip[x] == "B":
-            moveServo(-60,cam) # These degrees/duty cycles are wrong, change them
+            moveServo.moveServo(-60,cam) # These degrees/duty cycles are wrong, change them
             print("B2")
         elif APRS_clip[x] == "C":
             # Take picture
