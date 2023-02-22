@@ -33,21 +33,19 @@ def moveServo(deg, servo, pwm):
     # todo after launch make not get tangled
 
     # Todo make this number turn the right way
-    turn_number = 50
+    turn_number = 1
 
     if deg < 0:
         deg = -deg
         turn_number = 90 # Todo make this number turn the right way
 
     #pwm.ChangeDutyCycle(turn_number)
-    pwm.ChangeDutyCycle(5)
+    pwm.ChangeDutyCycle(turn_number)
     time.sleep(DEG_TO_NS * deg)
-    pwm.ChangeDutyCycle(7)
-    time.sleep(0.5)
-    pwm.ChangeDutyCycle(0)
-    #better_sleep(DEG_TO_NS * deg)
-
     pwm.stop()
+
+def deg_to_duty(deg, max_duty, min_duty):
+    return (deg-0)*(max_duty-min_duty)/180 + min_duty
 
 def turn_to_second(turns):
     # return turns * 0.4453 # one rotation at 500hz
