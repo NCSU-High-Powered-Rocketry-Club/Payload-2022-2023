@@ -33,7 +33,7 @@ def moveServo(deg, servo, pwm):
     # todo after launch make not get tangled
 
     # Todo make this number turn the right way
-    turn_number = 100
+    turn_number = 50
 
     if deg < 0:
         deg = -deg
