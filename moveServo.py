@@ -27,7 +27,7 @@ def moveServo(deg, servo):
     #    return
     
     GPIO.setup(pin,GPIO.OUT)
-    pwm = GPIO.PWM(pin, 500)
+    pwm = GPIO.PWM(pin, 50)
     print("starting servo")
     pwm.start(0)
 
