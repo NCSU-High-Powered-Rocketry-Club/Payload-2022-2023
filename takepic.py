@@ -3,9 +3,9 @@ import os
 
 gp.setwarnings(False)
 
-gp.setup(7, gp.OUT)
-gp.setup(11, gp.OUT)
-gp.setup(12, gp.OUT)
+gp.setup(15, gp.OUT)
+gp.setup(16, gp.OUT)
+gp.setup(18, gp.OUT)
 
 def takepic(topcam, x):
     if topcam == "big":

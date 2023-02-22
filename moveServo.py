@@ -37,7 +37,7 @@ def moveServo(deg, servo, pwm):
 
     if deg < 0:
         deg = -deg
-        turn_number = 90 # Todo make this number turn the right way
+        turn_number = 99 # Todo make this number turn the right way
 
     #pwm.ChangeDutyCycle(turn_number)
     pwm.ChangeDutyCycle(turn_number)

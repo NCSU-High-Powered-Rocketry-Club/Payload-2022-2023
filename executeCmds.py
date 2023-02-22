@@ -1,6 +1,7 @@
 #from PIL import Image
 import imageFilter
 import random
+import RPi.GPIO as GPIO
 import re
 import Servo
 import takepic
@@ -16,12 +17,28 @@ def executeCmds(APRS_clip, cam):
     x = 0
     gray = 0
     randnum = 0
+    print("Executing Commands")
+    if cam == "big":
+        pin = 33
+    elif cam == "pinky":
+        pin = 0 # Change
+    elif cam == "ring":
+        pin = 0 # Change
+    elif cam == "jahn":
+        pin = 0 # Change
+    else:
+        print("No pin assigned for Servo")
+
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(pin,GPIO.OUT)
+    pwm = GPIO.PWM(pin, 50)
+
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
-            moveServo(60,cam)
+            moveServo(60,cam,pwm)
             print("A1")
         elif APRS_clip[x] == "B":
-            moveServo(-60,cam) # These degrees/duty cycles are wrong, change them
+            moveServo(-60,cam,pwm) # These degrees/duty cycles are wrong, change them
             print("B2")
         elif APRS_clip[x] == "C":
             # Take picture
