@@ -57,3 +57,76 @@ e
 i1672860110.9735203
 o
 u
+02/21/2023 11:13:12 PM Using selector: EpollSelector
+02/21/2023 11:22:06 PM Using selector: EpollSelector
+02/21/2023 11:23:02 PM Packet checksum is 733bb69ba02450134a3eb8491fba4af8
+02/21/2023 11:23:02 PM Raw packet: KQ4EJQ-5>APDR16,WIDE1-1::WORLD    :Test{1
+02/21/2023 11:23:02 PM Destination length is 6
+02/21/2023 11:23:02 PM Packet is a message packet
+02/21/2023 11:23:02 PM WIDE1-1
+02/21/2023 11:23:02 PM Message is addressed to WORLD    , message is Test{1
+02/21/2023 11:23:02 PM Message has message ID 1
+02/21/2023 11:23:02 PM ----New data----
+Raw data from KISS: b'\x00\x82\xa0\x88\xa4bl\xe0\x96\xa2h\x8a\x94\xa2j\xae\x92\x88\x8ab@c\x03\xf0:WORLD    :Test{1'
+Parsed APRS frame: KQ4EJQ-5>APDR16,WIDE1-1::WORLD    :Test{1
+APRS Packet: <MessagePacket: KQ4EJQ-5 -> WORLD>
+Source: KQ4EJQ-5
+Destination: APDR16
+Path: WIDE1-1
+Timestamp: None
+Info: WORLD    :Test{1
+Message: Test
+02/21/2023 11:24:28 PM Using selector: EpollSelector
+02/21/2023 11:24:41 PM Packet checksum is 7b6a98df173ffc5a13774da05d0b6e8d
+02/21/2023 11:24:42 PM Raw packet: KQ4EJQ-5>APDR16,WIDE1-1::WORLD    :Test 2{3
+02/21/2023 11:24:42 PM Destination length is 6
+02/21/2023 11:24:42 PM Packet is a message packet
+02/21/2023 11:24:42 PM WIDE1-1
+02/21/2023 11:24:42 PM Message is addressed to WORLD    , message is Test 2{3
+02/21/2023 11:24:42 PM Message has message ID 3
+02/21/2023 11:24:42 PM ----New data----
+Raw data from KISS: b'\x00\x82\xa0\x88\xa4bl\xe0\x96\xa2h\x8a\x94\xa2j\xae\x92\x88\x8ab@c\x03\xf0:WORLD    :Test 2{3'
+Parsed APRS frame: KQ4EJQ-5>APDR16,WIDE1-1::WORLD    :Test 2{3
+APRS Packet: <MessagePacket: KQ4EJQ-5 -> WORLD>
+Source: KQ4EJQ-5
+Destination: APDR16
+Path: WIDE1-1
+Timestamp: None
+Info: WORLD    :Test 2{3
+Message: Test 2
+02/21/2023 11:27:06 PM Using selector: EpollSelector
+02/21/2023 11:27:09 PM Packet checksum is ab489c68097bdacfcd7d9411642deae0
+02/21/2023 11:27:09 PM Raw packet: KQ4EJQ-5>APDR16,WIDE1-1:=3546.27N\07840.44WO329/000/A=000306 
+02/21/2023 11:27:09 PM Destination length is 6
+02/21/2023 11:27:09 PM Packet is a position packet
+02/21/2023 11:27:09 PM WIDE1-1
+02/21/2023 11:27:09 PM Input latitude: 3546.27N
+02/21/2023 11:27:09 PM Ambiguity: 0
+02/21/2023 11:27:09 PM Degrees: 35
+02/21/2023 11:27:09 PM Minutes: 0.771167
+02/21/2023 11:27:09 PM Direction: N
+02/21/2023 11:27:09 PM Output latitude: 35.771167, ambiguity: 0
+02/21/2023 11:27:09 PM Input longitude: 07840.44W, ambiguity: 0
+02/21/2023 11:27:09 PM Degrees: 78
+02/21/2023 11:27:09 PM Ambiguity level: 0
+02/21/2023 11:27:09 PM Minutes: 0.674
+02/21/2023 11:27:09 PM Direction: W
+02/21/2023 11:27:09 PM Output longitude: -78.674
+02/21/2023 11:27:09 PM Latitude: 35.771167 (0) Longitude: -78.674
+02/21/2023 11:27:09 PM Symbol table: \
+02/21/2023 11:27:09 PM Symbol: O
+02/21/2023 11:27:09 PM Course is 329, speed is 0
+02/21/2023 11:27:09 PM Altitude is 306 ft
+02/21/2023 11:27:09 PM Comment is  
+02/21/2023 11:27:09 PM Latitude: 3546.27N (0) Longitude: 07840.44W
+02/21/2023 11:27:09 PM Symbol table: \
+02/21/2023 11:27:09 PM Symbol ID: O
+02/21/2023 11:27:09 PM ----New data----
+Raw data from KISS: b'\x00\x82\xa0\x88\xa4bl\xe0\x96\xa2h\x8a\x94\xa2j\xae\x92\x88\x8ab@c\x03\xf0=3546.27N\\07840.44WO329/000/A=000306 '
+Parsed APRS frame: KQ4EJQ-5>APDR16,WIDE1-1:=3546.27N\07840.44WO329/000/A=000306 
+APRS Packet: <PositionPacket: KQ4EJQ-5>
+Source: KQ4EJQ-5
+Destination: APDR16
+Path: WIDE1-1
+Timestamp: None
+Info: 3546.27N\07840.44WO329/000/A=000306 
