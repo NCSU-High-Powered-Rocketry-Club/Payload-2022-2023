@@ -13,7 +13,6 @@ DEG_TO_NS = 0.00000001 * 125_000
 
 def moveServo(deg, servo, pwm):
 
-    pin = 33
     #if servo == "big":
     #    pin = 19
     #elif servo == "jahn":
