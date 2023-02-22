@@ -39,7 +39,11 @@ def moveServo(deg, servo, pwm):
         deg = -deg
         turn_number = 90 # Todo make this number turn the right way
 
-    pwm.ChangeDutyCycle(turn_number)
+    #pwm.ChangeDutyCycle(turn_number)
+    pwm.ChangeDutyCycle(2)
+    pwm.ChangeDutyCycle(2)
+    pwm.ChangeDutyCycle(2)
+    pwm.ChangeDutyCycle(2)
     better_sleep(DEG_TO_NS * deg)
 
     pwm.stop()
