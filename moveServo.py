@@ -51,7 +51,7 @@ def turn_to_second(turns):
 def better_sleep(ns):
     start = time.time_ns()
     while True:
-        if (time.time_ns() - start) > 2:
+        if (time.time_ns() - start) > 4:
             break
 
 if __name__ == "__main__":
