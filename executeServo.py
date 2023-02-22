@@ -22,7 +22,7 @@ def executeServo():
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin,GPIO.OUT)
     pwm = GPIO.PWM(pin, 500)
-    moveServo.moveServo(60, "pinky")
+    moveServo.moveServo(60, "pinky", pwm)
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
             moveServo.moveServo(60,cam)
