@@ -46,5 +46,4 @@ def executeServo():
             print("You done fucked up chief")
         x = x + 3
 
-if __name__ == "__executeServo__":
-    executeServo()
+executeServo()
