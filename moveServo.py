@@ -42,11 +42,6 @@ def moveServo(deg, servo, pwm):
     #pwm.ChangeDutyCycle(turn_number)
     pwm.ChangeDutyCycle(2)
     time.sleep(1)
-    pwm.ChangeDutyCycle(2)
-    time.sleep(1)
-    pwm.ChangeDutyCycle(2)
-    time.sleep(1)
-    pwm.ChangeDutyCycle(2)
     better_sleep(DEG_TO_NS * deg)
 
     pwm.stop()
