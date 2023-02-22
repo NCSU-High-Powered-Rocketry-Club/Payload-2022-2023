@@ -9,7 +9,7 @@ import time
 #pwm.start(0)
 
 # Tweak this number until it turns good
-DEG_TO_NS = 100 * 1_000_000_000
+DEG_TO_NS = 0.00000001 * 1_000_000_000
 
 def moveServo(deg, servo, pwm):
 
@@ -41,7 +41,7 @@ def moveServo(deg, servo, pwm):
 
     #pwm.ChangeDutyCycle(turn_number)
     pwm.ChangeDutyCycle(5)
-    time.sleep(0.5)
+    time.sleep(DEG_TO_NS * deg)
     better_sleep(DEG_TO_NS * deg)
 
     pwm.stop()
