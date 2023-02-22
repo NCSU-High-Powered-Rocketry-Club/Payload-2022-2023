@@ -13,7 +13,7 @@ import moveServo
 #APRS_clip = aprsMsg[7:]
 
 def executeServo():
-    myServo = Servo.Servo(33, 0, 100) # Define class Servo in this file
+    #myServo = Servo.Servo(33, 0, 100) # Define class Servo in this file
     APRS_clip = "C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
     cam = "pinky"
     x = 0
