@@ -12,7 +12,7 @@ import time
 DEG_TO_NS = 0.1 * 1_000_000_000
 
 def moveServo(deg, servo):
-    GPIO.setmode(GPIO.BOARD)
+
     pin = 33
     #if servo == "big":
     #    pin = 19
@@ -26,8 +26,7 @@ def moveServo(deg, servo):
     #    print('No servo selected')
     #    return
     
-    GPIO.setup(pin,GPIO.OUT)
-    pwm = GPIO.PWM(pin, 50)
+
     print("starting servo")
     pwm.start(0)
 
