@@ -11,6 +11,18 @@ sys.path.append("./aprs_decoding/test")
 
 from APRSInterface import APRSInterface
 
+#Command line arguments
+import argparse
+
+msg = "Main HPRC Payload Program." 
+
+# Initialize parser
+parser = argparse.ArgumentParser(description=msg)
+# Adding APRS frequency argument
+parser.add_argument("-f", "--Frequency", help = "APRS Frequency")
+args = parser.parse_args()
+
+
 # rocket state
 class State(Enum):
     STANDBY = 0
@@ -27,8 +39,11 @@ AVERAGE_COUNT = 250
 ANTENNA_1_PIN = 17
 ANTENNA_2_PIN = 27
 
-def main():
-    aprs_interface = APRSInterface()
+def main(args):
+    if args.Frequency:
+        aprs_interface = APRSInterface(frequency=args.Frequency)
+    else:
+        aprs_interface = APRSInterface()
 
     sensor = BNOInterface()
 
@@ -148,4 +163,4 @@ def choose_antenna(sensor: BNOInterface):
     return cam_choice
 
 if __name__ == "__main__":
-    main()
+    main(args)

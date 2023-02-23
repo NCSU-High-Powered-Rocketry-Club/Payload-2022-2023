@@ -8,7 +8,7 @@ import logging
 
 
 class APRSInterface:
-    def __init__(self):
+    def __init__(self, frequency: str = "144.39"):
         # Set the logfile config and formatting
         # Make the logger print to stderr as well as log to file
         logging.basicConfig(handlers=[
@@ -17,6 +17,7 @@ class APRSInterface:
         ], level=logging.DEBUG,
             format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
         self.aprsMsg = []
+        self.frequency = frequency
 
     def stop(self):
         self.running = False
@@ -57,7 +58,8 @@ class APRSInterface:
         # And use rtl_fm -f 445.15M -s 48000 -o 4 - |
         # to read from the RTL-SDR, where 445.15 is the center frequency in MHz
 
-        command = 'rtl_fm -f 144.39M -s 48000 -o 4 - | direwolf -B 1200 -c direwolf.conf -b 16 -n 1 -r 48000 -a 0 -'
+        command = f'rtl_fm -f {self.frequency}M -s 48000 -o 4 - | direwolf -B 1200 -c direwolf.conf -b 16 -n 1 -r 48000 -a 0 -'
+
         proc = subprocess.Popen(
             command, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 
