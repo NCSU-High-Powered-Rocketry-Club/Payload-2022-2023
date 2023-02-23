@@ -4,7 +4,7 @@ import random
 import RPi.GPIO as GPIO
 import re
 import Servo
-#import takepic
+#imort takepic
 import moveServo
 #from PIL import Image
 
