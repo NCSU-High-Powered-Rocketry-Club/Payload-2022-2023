@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from Servo import Servo
+from Servo import Servo, RocketServos
 import time
 
 #GPIO.setmode(GPIO.BOARD)
@@ -11,7 +11,7 @@ import time
 # Tweak this number until it turns good
 DEG_TO_NS = 0.00000001 * 125_000
 
-def moveServo(deg, servo, pwm):
+def moveServo(deg, servo: Servo, pwm):
 
     #if servo == "big":
     #    pin = 19
@@ -47,7 +47,7 @@ def deg_to_duty(deg, max_duty, min_duty):
     return (deg-0)*(max_duty-min_duty)/180 + min_duty
 
 def turn_to_second(turns):
-    # return turns * 0.4453 # one rotation at 500hz
+    # one rotation at 500hz
     return turns * 0.4453
 
 def better_sleep(ns):
