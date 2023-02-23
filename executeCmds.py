@@ -3,7 +3,7 @@ import imageFilter
 import random
 import RPi.GPIO as GPIO
 import re
-import Servo
+import ServoLib
 import takepic
 import moveServo
 from PIL import Image
@@ -13,7 +13,7 @@ from PIL import Image
 #APRS_clip = aprsMsg[7:]
 
 def executeCmds(APRS_clip, cam):
-    myServo = Servo(33, 0, 100) # Define class Servo in this file
+    myServo = ServoLib(33, 0, 100) # Define class Servo in this file
     x = 0
     gray = 0
     randnum = 0

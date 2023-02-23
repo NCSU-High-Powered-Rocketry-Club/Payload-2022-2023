@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from Servo import RocketServos, Servo
+from ServoLib import RocketServos, Servo
 import time
 
 def main():
