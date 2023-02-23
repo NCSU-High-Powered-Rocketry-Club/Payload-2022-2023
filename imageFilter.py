@@ -1,7 +1,7 @@
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
-#import deeppyer, asyncio
+import deeppyer, asyncio
 
 def grassless(image):
     image_data = image.load()
