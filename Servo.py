@@ -26,8 +26,12 @@ class Servo:
 
         dutyCycle = 0 if deg > self.currentAngle else 1000 # might need to reverse
 
+        start = time.time()
+        end = start + dutyCycle
+
         self.pi_pwm.ChangeDutyCycle(dutyCycle)
-        time.sleep(self.uSPerDeg * deg)
+        while time.time() > end:
+            pass
         self.pi_pwm.ChangeDutyCycle(500)
         
 class RocketServos(Enum):

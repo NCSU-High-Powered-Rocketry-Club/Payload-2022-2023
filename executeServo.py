@@ -3,7 +3,7 @@
 import random
 import RPi.GPIO as GPIO
 import re
-import Servo
+from Servo import RocketServos
 #imort takepic
 import moveServo
 #from PIL import Image
