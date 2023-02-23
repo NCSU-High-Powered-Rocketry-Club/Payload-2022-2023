@@ -19,7 +19,7 @@ msg = "Main HPRC Payload Program."
 # Initialize parser
 parser = argparse.ArgumentParser(description=msg)
 # Adding APRS frequency argument
-parser.add_argument("-f", "--Frequency", help = "APRS Frequency")
+parser.add_argument("-f", "--Frequency", help = "APRS Frequency in MHz")
 args = parser.parse_args()
 
 
