@@ -28,26 +28,26 @@ def executeCamera():
         elif APRS_clip[x] == "C":
             # Take picture
             takepic.takepic(cam, x)
-            if gray == 1: # 1 if grayscale filter has been applied
-                pic2gray = "capture_%s_%d.jpg" % (cam, x)
-                pic2gray = imageFilter.blackandwhite(pic2gray)
-                pic2gray.save("capture_%s_%d.jpg" % (cam, x))
+           # if gray == 1: # 1 if grayscale filter has been applied
+           #     pic2gray = "capture_%s_%d.jpg" % (cam, x)
+           #     pic2gray = imageFilter.blackandwhite(pic2gray)
+           #     pic2gray.save("capture_%s_%d.jpg" % (cam, x))
 
             # If randnum~=0, then a random filter has been applied
-            if randnum == 1: 
-                pic2filter = "capture_%s_%d.jpg" % (cam, x)
-                pic2filter = imageFilter.fry(pic2filter)
-                pic2filter.save("capture_%s_%d.jpg" % (cam, x))
-            elif randnum == 2:
-                pic2filter = "capture_%s_%d.jpg" % (cam, x)
-                pic2filter = imageFilter.grassless(pic2filter)
-                pic2filter.save("capture_%s_%d.jpg" % (cam, x))
-            elif randnum == 3:
-                pic2filter = "capture_%s_%d.jpg" % (cam, x)
-                pic2filter = imageFilter.meme(pic2filter)
-                pic2filter.save("capture_%s_%d.jpg" % (cam, x))
-            else:
-                print('Your RNG is broken')
+           # if randnum == 1: 
+           #     pic2filter = "capture_%s_%d.jpg" % (cam, x)
+           #     pic2filter = imageFilter.fry(pic2filter)
+           #     pic2filter.save("capture_%s_%d.jpg" % (cam, x))
+           # elif randnum == 2:
+           #     pic2filter = "capture_%s_%d.jpg" % (cam, x)
+           #     pic2filter = imageFilter.grassless(pic2filter)
+           #     pic2filter.save("capture_%s_%d.jpg" % (cam, x))
+           # elif randnum == 3:
+           #     pic2filter = "capture_%s_%d.jpg" % (cam, x)
+           #     pic2filter = imageFilter.meme(pic2filter)
+           #     pic2filter.save("capture_%s_%d.jpg" % (cam, x))
+           # else:
+           #     print('Your RNG is broken')
             print("C3")
         elif APRS_clip[x] == "D":
             # Change camera mode from grayscale to color
@@ -59,9 +59,9 @@ def executeCamera():
             print("E5")
         elif APRS_clip[x] == "F":
             # Rotate image 180deg
-            pic2rotate = "capture_%s_%d.jpg" % (cam, x-3)
-            pic2rotate = imageFilter.rotate180(pic2rotate)
-            pic2rotate.save("capture_%s_%d.jpg" % (cam, x))
+           # pic2rotate = "capture_%s_%d.jpg" % (cam, x-3)
+           # pic2rotate = imageFilter.rotate180(pic2rotate)
+           # pic2rotate.save("capture_%s_%d.jpg" % (cam, x))
             print("F6")
         elif APRS_clip[x] == "G":
             # Special effects filter
