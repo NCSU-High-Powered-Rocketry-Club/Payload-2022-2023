@@ -24,7 +24,7 @@ class Servo:
         print(f"Set servo angle {deg}")
         print(f"Microseconds: {deg * self.uSPerDeg}")
 
-        dutyCycle = 0 if deg > self.currentAngle else 100 # might need to reverse
+        dutyCycle = 1 if deg > self.currentAngle else 99 # might need to reverse
 
         start = time.time()
         end = start + dutyCycle
@@ -32,7 +32,7 @@ class Servo:
         self.pi_pwm.ChangeDutyCycle(dutyCycle)
         while time.time() > end:
             pass
-        self.pi_pwm.ChangeDutyCycle(100)
+        self.pi_pwm.ChangeDutyCycle(99)
         
 class RocketServos(Enum):
     BIG = Servo(19, 1000)
