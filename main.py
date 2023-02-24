@@ -3,7 +3,7 @@ from enum import Enum
 from BNOInterface import BNOInterface
 import time
 from PIL import Image
-import executeCmds
+import executeCmdsPDF # Change for Hville
 
 # Necessary to prevent import issues on APRSInterface
 import sys
@@ -105,7 +105,7 @@ def main(args):
     # The index of 7 takes out the callsign
     # Execute the commands for the camera unit
     APRS_clip = aprs_interface.aprsMsg[0][7:]
-    #executeCmds.executeCmds(APRS_clip, cam_choice)
+    executeCmdsPDF.executeCmdsPDF(APRS_clip, cam_choice) # Change to executeCmds for Hville
 
 
 def choose_antenna(sensor: BNOInterface):

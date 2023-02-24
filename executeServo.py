@@ -17,7 +17,7 @@ def executeServo():
     APRS_clip = "C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
     cam = "pinky"
     x = 0
-    pin = 19
+    pin = 19 # Change this to the correct pin number (choose it)
     print("Running")
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin,GPIO.OUT)
