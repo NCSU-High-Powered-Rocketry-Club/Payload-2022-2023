@@ -15,7 +15,7 @@ class Servo:
         self.pi_pwm = GPIO.PWM(self.servoPin, 50)
 
         # start PWM of required Duty Cycle
-        self.pi_pwm.start(500) 
+        self.pi_pwm.start(50) 
 
         self.uSPerDeg = uSPerDeg
         self.currentAngle = 0
@@ -24,7 +24,7 @@ class Servo:
         print(f"Set servo angle {deg}")
         print(f"Microseconds: {deg * self.uSPerDeg}")
 
-        dutyCycle = 0 if deg > self.currentAngle else 1000 # might need to reverse
+        dutyCycle = 0 if deg > self.currentAngle else 100 # might need to reverse
 
         start = time.time()
         end = start + dutyCycle
@@ -32,7 +32,7 @@ class Servo:
         self.pi_pwm.ChangeDutyCycle(dutyCycle)
         while time.time() > end:
             pass
-        self.pi_pwm.ChangeDutyCycle(500)
+        self.pi_pwm.ChangeDutyCycle(100)
         
 class RocketServos(Enum):
     BIG = Servo(19, 1000)
