@@ -1,8 +1,16 @@
 import RPi.GPIO as GPIO
-from picamera import PiCamera
+import libcamera
+import os
+import numpy as np
+from PIL import Image
 import time
+import cv2
 
 def takepicPDF(cam, x):
-    camera = PiCamera()
+    camera = libcamera.Camera()
+    camera.start()
+    buffer = camera.capture()
+    image_data = np.frombuffer(buffer, dtype=np.uint8)
+    image_
     time.sleep(2)
-    camera.capture("/home/pi/Payload-2022-2023/capture_%s_%d.jpg" % (cam,x))
+    image = rawCapture.array
