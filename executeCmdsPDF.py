@@ -11,11 +11,13 @@ from PIL import Image
 #example_APRS = "XX4XXX C3 E5 C3 D4 C3 F6 B2 C3 B2 C3"
 #APRS_clip = aprsMsg[7:]
 
-def executeCmdsPDF(APRS_clip, cam):
+def executeCmdsPDF():
     x = 0
     gray = 0
     randnum = 0
     pin = 22 # Change this to the correct pin that you'll use, you gotta test it
+    APRS_clip = "C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
+    cam = "pinky"
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin,GPIO.OUT)
     pwm = GPIO.PWM(pin, 50)
