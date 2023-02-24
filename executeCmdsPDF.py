@@ -2,7 +2,7 @@ import imageFilter
 import random
 import RPi.GPIO as GPIO
 import re
-from ServoLib import RocketServos
+#from ServoLib import RocketServos
 import takepicPDF
 import moveServo
 from PIL import Image

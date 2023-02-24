@@ -40,7 +40,7 @@ def main():
     capture(4)
     
 def capture(cam):
-    cmd = "libcamera-still -o capture_%d.jpg" % cam
+    cmd = "libcamera-still -n -o capture_%d.jpg" % cam
     os.system(cmd)
 
 if __name__ == "__main__":

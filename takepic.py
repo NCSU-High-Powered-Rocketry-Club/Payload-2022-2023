@@ -18,9 +18,9 @@ def takepic(topcam, x):
         capture(topcam, x)
     elif topcam == "pinky":
         print('Pinky Toe') 
-        i2c = "i2cset -y 1 0x70 0x00 0x05"
+        i2c = "i2cset -y 1 0x28 0x00 0x05"
         os.system(i2c)
-        gp.output(15, True)
+        gp.output(15, False)
         gp.output(16, False)
         gp.output(18, True)
         capture(topcam, x)
@@ -44,5 +44,5 @@ def takepic(topcam, x):
         print("uh oh")
     
 def capture(cam,x):
-    cmd = "libcamera-still -o capture_%s_%d.jpg" % (cam, x)
+    cmd = "libcamera-still -n -o capture_%s_%d.jpg" % (cam, x)
     os.system(cmd)
