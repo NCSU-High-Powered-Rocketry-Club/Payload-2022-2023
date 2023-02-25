@@ -2,10 +2,10 @@ import imageFilter
 import random
 import RPi.GPIO as GPIO
 import re
-#from ServoLib import RocketServos
 import takepicPDF
-from ServoLib import RocketServos
+#from ServoLib import RocketServos
 from PIL import Image
+import moveServo
 
 #example_APRS = "XX4XXX C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
 #example_APRS = "XX4XXX C3 E5 C3 D4 C3 F6 B2 C3 B2 C3"
@@ -16,14 +16,20 @@ def executeCmdsPDF():
     gray = 0
     randnum = 0
     pin = 19 # Change this to the correct pin that you'll use, you gotta test it
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(pin,GPIO.OUT)
+    pwm = GPIO.PWM(pin, 50)
+    moveServo.moveServo(60, "pinky", pwm)
     APRS_clip = "C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
     cam = "pinky"
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
-            RocketServos.PINKY.value.set_degrees(-60)
+            moveServo.moveServo(60,cam,pwm)
+            #RocketServos.PINKY.value.set_degrees(-60)
             print("A1")
         elif APRS_clip[x] == "B":
-            RocketServos.PINKY.value.set_degrees(60)
+            moveServo.moveServo(-60,cam,pwm)
+            #RocketServos.PINKY.value.set_degrees(60)
             print("B2")
         elif APRS_clip[x] == "C":
             # Take picture
