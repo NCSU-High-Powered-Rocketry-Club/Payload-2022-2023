@@ -14,30 +14,35 @@ class Servo:
         GPIO.setup(self.servoPin, GPIO.OUT)
 
         #create PWM instance with frequency
-        self.pi_pwm = GPIO.PWM(self.servoPin, 50)
+        self.pi_pwm = GPIO.PWM(self.servoPin, 100)
 
         # start PWM of required Duty Cycle
-        self.pi_pwm.start(30) 
+        self.pi_pwm.start(15) 
 
-        self.uSPerDeg = uSPerDeg
+        self.nsPerDeg = uSPerDeg
         self.currentAngle = 0
 
     def set_degrees(self, deg):
         print(f"Set servo angle {deg}")
-        print(f"Microseconds: {deg * self.uSPerDeg}")
+        print(f"Microseconds: {deg * self.nsPerDeg}")
 
-        dutyCycle = 1 if deg > self.currentAngle else 99 # might need to reverse
+        dutyCycle = 1 if deg < 0 else 30 # might need to reverse
 
-        duration = abs(deg) * self.uSPerDeg * 1.0e-6
+        start = time.time_ns()
+        end = start + abs(deg) * self.nsPerDeg
 
-        print(f"Duration: ${duration}")
+        print(f"Duration: {end - start}ns, duty cycle: {dutyCycle}")
 
         self.pi_pwm.ChangeDutyCycle(dutyCycle)
-        time.sleep(duration)
-        self.pi_pwm.ChangeDutyCycle(50)
+        while time.time_ns() < end:
+            # print(f"Start: {start} | End: {end}")
+            pass
+        print("done!")
+        self.pi_pwm.ChangeDutyCycle(15)
+        # self.currentAngle = deg
         
 class RocketServos(Enum):
     BIG = Servo(19, 1000)
-    JAHN = Servo(21, 1000)
+    JAHN = Servo(21, 909090+10000)
     RING = Servo(22, 1000)
     PINKY = Servo(23, 1000)

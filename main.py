@@ -4,6 +4,7 @@ from BNOInterface import BNOInterface
 import time
 from PIL import Image
 import executeCmdsPDF # Change for Hville
+import asyncio
 
 # Necessary to prevent import issues on APRSInterface
 import sys
@@ -105,7 +106,7 @@ def main(args):
     # The index of 7 takes out the callsign
     # Execute the commands for the camera unit
     APRS_clip = aprs_interface.aprsMsg[0][7:]
-    executeCmdsPDF.executeCmdsPDF(APRS_clip) # Change to executeCmds for Hville
+    asyncio.run(executeCmdsPDF.executeCmdsPDF(APRS_clip)) # Change to executeCmds for Hville
 
 
 def choose_antenna(sensor: BNOInterface):
