@@ -15,7 +15,7 @@ def executeCmdsPDF():
     x = 0
     gray = 0
     randnum = 0
-    pin = 22 # Change this to the correct pin that you'll use, you gotta test it
+    pin = 19 # Change this to the correct pin that you'll use, you gotta test it
     APRS_clip = "C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
     cam = "pinky"
     while x < len(APRS_clip):
