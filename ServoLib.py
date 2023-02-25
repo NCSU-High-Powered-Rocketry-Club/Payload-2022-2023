@@ -8,6 +8,8 @@ class Servo:
         GPIO.setwarnings(False)			#disable warnings
         GPIO.setmode(GPIO.BOARD)		#set pin numbering system
 
+        print (f"Initialzing servo on pin {self.servoPin}")
+
         # set the servo pin to output
         GPIO.setup(self.servoPin, GPIO.OUT)
 

@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-from ServoLib import Servo, RocketServos
+# from ServoLib import Servo, RocketServos
 import time
 
 #GPIO.setmode(GPIO.BOARD)
