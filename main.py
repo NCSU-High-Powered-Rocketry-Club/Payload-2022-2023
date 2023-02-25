@@ -63,14 +63,14 @@ def main(args):
 
     while state is State.STANDBY:
         accel = sensor.get_linear_acceleration()
-        # print(accel)
+        print(accel)
         if accel != (None, None, None):
             accelerations[idx] = abs(accel[0])
 
             idx = (idx+1) % AVERAGE_COUNT
 
             average_accel = sum(accelerations) / AVERAGE_COUNT
-            # print(average_accel)
+            #print(average_accel)
 
             if average_accel > 3:
                 state = State.LAUNCH
@@ -113,7 +113,7 @@ def choose_antenna(sensor: BNOInterface):
     #setup orientation determination
 
     gravity = sensor.get_gravity()
-    #print(f'Gravity: {gravity}')
+    print(f'Gravity: {gravity}')
 
     # antenna 1 , IMU UP or IMU rotated 90 degrees CCW from up position
     # (looking at the bulkhead from the aft posiiton)
@@ -129,11 +129,11 @@ def choose_antenna(sensor: BNOInterface):
         GPIO.output(ANTENNA_1_PIN, True)
         GPIO.output(ANTENNA_2_PIN, False)
 
-        if gravity[1] < -1 and gravity[2] < -1:
-            cam_choice = "big"
+        #if gravity[1] < -1 and gravity[2] < -1:
+        #    cam_choice = "big"
             #print("big")
-        else: #gravity[1] > 1 and gravity[2] < -1:
-            cam_choice = "jahn"
+        #else: #gravity[1] > 1 and gravity[2] < -1:
+        #    cam_choice = "jahn"
             #print("jahn")
         # print("Chose antenna 2")
 
@@ -144,23 +144,23 @@ def choose_antenna(sensor: BNOInterface):
         GPIO.output(ANTENNA_1_PIN, False)
         # print("Chose antenna 1")
 
-        if gravity[1] > 1 and gravity[2] > 1:
-            cam_choice = "pinky"
+        #if gravity[1] > 1 and gravity[2] > 1:
+        #    cam_choice = "pinky"
             #print("pinky")
-        else: #gravity[1] < -1 and gravity[2] > 1:
-            cam_choice = "ring"
+        #else: #gravity[1] < -1 and gravity[2] > 1:
+        #    cam_choice = "ring"
             #print("pinky")
 
     else:
         GPIO.output(ANTENNA_2_PIN, True)
         GPIO.output(ANTENNA_1_PIN, False)
 
-        cam_choice = "big"
+        #cam_choice = "big"
         #print("No camera chosen")
 
         # print(f"Error reading gravity data: {gravity}")
         # print("Chose antenna 1")
-    return cam_choice
+    #return cam_choice
 
 if __name__ == "__main__":
     main(args)
