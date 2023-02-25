@@ -29,8 +29,10 @@ class Servo:
         start = time.time_ns()/10
         end = start + (deg * self.uSPerDeg)
 
+        print(f"start time: ${start} | end time: ${end}")
+
         self.pi_pwm.ChangeDutyCycle(dutyCycle)
-        while time.time_ns()/10 > end:
+        while time.time_ns()/10 < end:
             pass
         self.pi_pwm.ChangeDutyCycle(99)
         
