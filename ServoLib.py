@@ -33,8 +33,9 @@ class Servo:
 
         self.pi_pwm.ChangeDutyCycle(dutyCycle)
         while time.time_ns()/10 < end:
+            print("test")
             pass
-        self.pi_pwm.ChangeDutyCycle(99)
+        self.pi_pwm.ChangeDutyCycle(50)
         
 class RocketServos(Enum):
     BIG = Servo(19, 1000)
