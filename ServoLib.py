@@ -27,13 +27,12 @@ class Servo:
         dutyCycle = 1 if deg > self.currentAngle else 99 # might need to reverse
 
         start = time.time_ns()/10
-        end = start + (deg * self.uSPerDeg)
+        end = start + (abs(deg) * self.uSPerDeg)
 
         print(f"start time: ${start} | end time: ${end}")
 
         self.pi_pwm.ChangeDutyCycle(dutyCycle)
         while time.time_ns()/10 < end:
-            print("test")
             pass
         self.pi_pwm.ChangeDutyCycle(50)
         
