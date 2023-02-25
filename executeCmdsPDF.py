@@ -3,34 +3,35 @@ import random
 import RPi.GPIO as GPIO
 import re
 import takepicPDF
-#from ServoLib import RocketServos
+from ServoLib import RocketServos
 from PIL import Image
 import moveServo
+import asyncio
 
 #example_APRS = "XX4XXX C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
 #example_APRS = "XX4XXX C3 E5 C3 D4 C3 F6 B2 C3 B2 C3"
 #APRS_clip = aprsMsg[7:]
 
-def executeCmdsPDF():
+async def executeCmdsPDF(APRS_clip):
     x = 0
     gray = 0
     randnum = 0
-    pin = 19 # Change this to the correct pin that you'll use, you gotta test it
-    GPIO.cleanup(pin)
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(pin,GPIO.OUT)
-    pwm = GPIO.PWM(pin, 50)
-    moveServo.moveServo(60, pwm)
-    APRS_clip = "C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
+    pin = 21 # Change this to the correct pin that you'll use, you gotta test it
+    # GPIO.cleanup(pin)
+    # GPIO.setmode(GPIO.BOARD)
+    # GPIO.setup(pin,GPIO.OUT)
+    # pwm = GPIO.PWM(pin, 50)
+    # moveServo.moveServo(60, pwm)
+    APRS_clip = "C3 A1 D4 C3 F6 C3 G6 B2 B2 C3"
     cam = "pinky"
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
-            moveServo.moveServo(60,pwm)
-            #RocketServos.PINKY.value.set_degrees(-60)
+            # moveServo.moveServo(60,pwm)
+            RocketServos.JAHN.value.set_degrees(-60)
             print("A1")
         elif APRS_clip[x] == "B":
-            moveServo.moveServo(-60,pwm)
-            #RocketServos.PINKY.value.set_degrees(60)
+            # moveServo.moveServo(-60,pwm)
+            RocketServos.JAHN.value.set_degrees(60)
             print("B2")
         elif APRS_clip[x] == "C":
             # Take picture
@@ -81,7 +82,12 @@ def executeCmdsPDF():
         elif APRS_clip[x] == "G":
             # Special effects filter
             print("G7")
-            randnum = random.randint(1,3)
+            pic2fuck = "capture_%s_%d.jpg" % (cam, x-3)
+            pic2fuck = Image.open(r'/home/pi/Payload-2022-2023/%s' % pic2fuck) # Make sure this is right
+            func = random.choice([imageFilter.blackandwhite, imageFilter.meme, imageFilter.grassless])
+            print (func)
+            fuckedpic = await func(pic2fuck, x)
+            fuckedpic.save("capture_%s_%d.jpg" % (cam, x))
         elif APRS_clip[x] == "H":
             randnum = 0
             gray = 0
@@ -90,4 +96,4 @@ def executeCmdsPDF():
             print("You done fucked up chief")
         x = x + 3
 
-executeCmdsPDF()
+asyncio.run(executeCmdsPDF(None))
