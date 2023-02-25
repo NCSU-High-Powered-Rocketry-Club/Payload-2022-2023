@@ -20,10 +20,10 @@ def executeCmdsPDF():
     cam = "pinky"
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
-            RocketServos.BIG.value.set_degrees(-60)
+            RocketServos.PINKY.value.set_degrees(-60)
             print("A1")
         elif APRS_clip[x] == "B":
-            RocketServos.BIG.value.set_degrees(60)
+            RocketServos.PINKY.value.set_degrees(60)
             print("B2")
         elif APRS_clip[x] == "C":
             # Take picture

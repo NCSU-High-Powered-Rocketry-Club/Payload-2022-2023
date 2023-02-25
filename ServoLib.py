@@ -38,4 +38,4 @@ class RocketServos(Enum):
     BIG = Servo(19, 1000)
     JAHN = Servo(21, 1000)
     RING = Servo(22, 1000)
-    PINKY = Servo(33, 1000)
+    PINKY = Servo(23, 1000)
