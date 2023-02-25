@@ -16,6 +16,7 @@ def executeCmdsPDF():
     gray = 0
     randnum = 0
     pin = 19 # Change this to the correct pin that you'll use, you gotta test it
+    GPIO.cleanup(pin)
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pin,GPIO.OUT)
     pwm = GPIO.PWM(pin, 50)
