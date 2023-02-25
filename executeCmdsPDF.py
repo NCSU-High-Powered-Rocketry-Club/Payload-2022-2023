@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 import re
 #from ServoLib import RocketServos
 import takepicPDF
-import moveServo
+from ServoLib import RocketServos
 from PIL import Image
 
 #example_APRS = "XX4XXX C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
@@ -18,15 +18,12 @@ def executeCmdsPDF():
     pin = 22 # Change this to the correct pin that you'll use, you gotta test it
     APRS_clip = "C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
     cam = "pinky"
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(pin,GPIO.OUT)
-    pwm = GPIO.PWM(pin, 50)
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
-            moveServo.moveServo(60,pwm)
+            RocketServos.BIG.value.set_degrees(-60)
             print("A1")
         elif APRS_clip[x] == "B":
-            moveServo.moveServo(-60,pwm)
+            RocketServos.BIG.value.set_degrees(60)
             print("B2")
         elif APRS_clip[x] == "C":
             # Take picture
