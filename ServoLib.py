@@ -15,7 +15,7 @@ class Servo:
         self.pi_pwm = GPIO.PWM(self.servoPin, 50)
 
         # start PWM of required Duty Cycle
-        self.pi_pwm.start(50) 
+        self.pi_pwm.start(30) 
 
         self.uSPerDeg = uSPerDeg
         self.currentAngle = 0
@@ -26,14 +26,12 @@ class Servo:
 
         dutyCycle = 1 if deg > self.currentAngle else 99 # might need to reverse
 
-        start = time.time_ns()/10
-        end = start + (abs(deg) * self.uSPerDeg)
+        duration = abs(deg) * self.uSPerDeg * 1.0e-6
 
-        print(f"start time: ${start} | end time: ${end}")
+        print(f"Duration: ${duration}")
 
         self.pi_pwm.ChangeDutyCycle(dutyCycle)
-        while time.time_ns()/10 < end:
-            pass
+        time.sleep(duration)
         self.pi_pwm.ChangeDutyCycle(50)
         
 class RocketServos(Enum):
