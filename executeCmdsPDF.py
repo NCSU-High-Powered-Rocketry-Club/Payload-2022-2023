@@ -67,7 +67,8 @@ def executeCmdsPDF():
             # Rotate image 180deg
             pic2rotate = "capture_%s_%d.jpg" % (cam, x-3)
             pic2rotate = Image.open(r'/home/pi/Payload-2022-2023/%s' % pic2rotate) # Make sure this is right
-            pic2rotate = imageFilter.rotate180(pic2rotate)
+            imageFilter.rotate180(pic2rotate, x)
+            pic2rotate = Image.open(r'/home/pi/Payload-2022-2023/rotated_%d.jpg' % x)
             pic2rotate.save("capture_%s_%d.jpg" % (cam, x))
             print("F6")
         elif APRS_clip[x] == "G":
