@@ -22,7 +22,7 @@ async def executeCmdsPDF(APRS_clip):
     # GPIO.setup(pin,GPIO.OUT)
     # pwm = GPIO.PWM(pin, 50)
     # moveServo.moveServo(60, pwm)
-    APRS_clip = "C3 A1 D4 C3 F6 C3 G6 B2 B2 C3"
+   # APRS_clip = "C3 A1 D4 C3 F6 C3 G6 B2 B2 C3"
     cam = "pinky"
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
@@ -42,10 +42,11 @@ async def executeCmdsPDF(APRS_clip):
                 pic2gray.save("capture_%s_%d.jpg" % (cam, x))
             # If randnum~=0, then a random filter has been applied
             if randnum == 1: # deepfry
-                pic2filter = "capture_%s_%d.jpg" % (cam, x)
-                pic2filter = Image.open(r'/home/pi/Payload-2022-2023/%s' % pic2filter)
-                pic2filter = imageFilter.fry(pic2filter)
-                pic2filter.save("capture_%s_%d.jpg" % (cam, x))
+               # pic2filter = "capture_%s_%d.jpg" % (cam, x)
+               # pic2filter = Image.open(r'/home/pi/Payload-2022-2023/%s' % pic2filter)
+               # pic2filter = imageFilter.fry(pic2filter)
+               # pic2filter.save("capture_%s_%d.jpg" % (cam, x))
+               print('whoops cant fry lol')
             elif randnum == 2: # grassless
                 pic2filter = "capture_%s_%d.jpg" % (cam, x)
                 pic2filter = Image.open(r'/home/pi/Payload-2022-2023/%s' % pic2filter)

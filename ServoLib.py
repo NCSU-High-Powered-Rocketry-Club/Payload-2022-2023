@@ -6,7 +6,7 @@ class Servo:
     def __init__(self, servoPin, uSPerDeg):
         self.servoPin = servoPin
         GPIO.setwarnings(False)			#disable warnings
-        #GPIO.setmode(GPIO.BOARD)		#set pin numbering system
+        GPIO.setmode(GPIO.BCM)		#set pin numbering system
 
         print (f"Initialzing servo on pin {self.servoPin}")
 
@@ -42,7 +42,7 @@ class Servo:
         # self.currentAngle = deg
         
 class RocketServos(Enum):
-    BIG = Servo(19, 1000)
-    JAHN = Servo(21, 909090+10000)
-    RING = Servo(22, 1000)
-    PINKY = Servo(23, 1000)
+    BIG = Servo(10, 1000)
+    JAHN = Servo(9, 909090+10000)
+    RING = Servo(25, 1000)
+    PINKY = Servo(11, 1000)
