@@ -96,4 +96,4 @@ async def executeCmdsPDF(APRS_clip):
             print("You done fucked up chief")
         x = x + 3
 
-asyncio.run(executeCmdsPDF(None))
+#asyncio.run(executeCmdsPDF(None))

@@ -6,7 +6,7 @@ class Servo:
     def __init__(self, servoPin, uSPerDeg):
         self.servoPin = servoPin
         GPIO.setwarnings(False)			#disable warnings
-        GPIO.setmode(GPIO.BOARD)		#set pin numbering system
+        #GPIO.setmode(GPIO.BOARD)		#set pin numbering system
 
         print (f"Initialzing servo on pin {self.servoPin}")
 

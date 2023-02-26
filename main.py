@@ -37,8 +37,8 @@ DESCENT_TIME = 10
 AVERAGE_COUNT = 250
 
 # these are the GPIO pins we are controlling the relay switch with
-ANTENNA_1_PIN = 17
-ANTENNA_2_PIN = 27
+ANTENNA_1_PIN = 11
+ANTENNA_2_PIN = 13
 
 def main(args):
     if args.Frequency:
@@ -52,7 +52,7 @@ def main(args):
 
     # setup board
     GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BCM)
+    GPIO.setmode(GPIO.BOARD)
 
     # set output pins to output
     GPIO.setup(ANTENNA_1_PIN, GPIO.OUT)
