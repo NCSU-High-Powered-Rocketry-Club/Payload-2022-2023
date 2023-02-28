@@ -33,6 +33,6 @@ async def blackandwhite(image,x):
     bnw = image.convert("1")
     return bnw
 if __name__ == "__main__":
-    pic2filter = "capture_pinky_0.jpg"
+    pic2filter = Image.open("capture_pinky_0.jpg")
     rotate180(pic2filter, "bruh")
     
