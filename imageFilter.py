@@ -34,7 +34,7 @@ async def blackandwhite(image,x):
     bnw = image.convert("1")
     return bnw
 if __name__ == "__main__":
-    pic2filter = Image.open("capture_pinky_0.jpg")
+    pic2filter = Image.open("MikeWhenHe.png")
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(fry(pic2filter, 3))
+    loop.run_until_complete(fry(pic2filter, 5))
     
