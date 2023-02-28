@@ -81,7 +81,7 @@ def main(args):
     # delay for descent time
     delayStart = time.time()
     while state is State.LAUNCH:
-        if delayStart + DESCENT_TIME < time.time():
+        if delayStart + DESCENT_TIME < time.time(): # Need to check and make sure it's landed
             state = State.LANDING
 
     print("LANDED! Choosing antenna...")
