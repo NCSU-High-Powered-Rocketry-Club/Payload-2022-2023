@@ -29,7 +29,6 @@ class PayloadSystem:
     ANTENNA_2_PIN = 27
 
     # rocket state
-
     class LaunchState(Enum):
         STANDBY = 0
         LAUNCH = 1
@@ -101,6 +100,7 @@ class PayloadSystem:
             # Need to check that the callsign is actually from NASA; must add that here
             if len(self.aprs_interface.aprsMsg) > 0:
                 self.aprs_interface.stop()
+                self.messageReceived = True
                 self.state = self.LaunchState.CAMERA
 
         elif currentState is self.LaunchState.CAMERA:

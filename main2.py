@@ -12,7 +12,7 @@ sys.path.append("./aprs_decoding/test")
 if True:
     from APRSInterface import APRSInterface
 
-
+# Program description
 msg = "Main HPRC Payload Program."
 
 # Initialize parser
