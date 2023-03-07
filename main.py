@@ -92,8 +92,8 @@ def main(args):
 
     try:
         while True:
-            choose_antenna(sensor)
-            #cam_choice = choose_antenna(sensor)
+            #choose_antenna(sensor)
+            cam_choice = choose_antenna(sensor)
             print(len(aprs_interface.aprsMsg))
             if len(aprs_interface.aprsMsg) > 0:
                 break
@@ -131,38 +131,38 @@ def choose_antenna(sensor: BNOInterface):
         GPIO.output(ANTENNA_1_PIN, True)
         GPIO.output(ANTENNA_2_PIN, False)
 
-        #if gravity[1] < -1 and gravity[2] < -1:
-        #    cam_choice = "big"
-            #print("big")
-        #else: #gravity[1] > 1 and gravity[2] < -1:
-        #    cam_choice = "jahn"
-            #print("jahn")
-        # print("Chose antenna 2")
+        if gravity[1] < -1 and gravity[2] < -1:
+            cam_choice = "big"
+            print("big")
+        else: #gravity[1] > 1 and gravity[2] < -1:
+            cam_choice = "jahn"
+            print("jahn")
+        print("Chose antenna 2")
 
     # choose antenna 1
     elif gravity[2] < -8.5*0.707 or gravity[1] < 8.5*0.707:
         # set output pins to output
         GPIO.output(ANTENNA_2_PIN, True)
         GPIO.output(ANTENNA_1_PIN, False)
-        # print("Chose antenna 1")
+        print("Chose antenna 1")
 
-        #if gravity[1] > 1 and gravity[2] > 1:
-        #    cam_choice = "pinky"
-            #print("pinky")
-        #else: #gravity[1] < -1 and gravity[2] > 1:
-        #    cam_choice = "ring"
-            #print("pinky")
+        if gravity[1] > 1 and gravity[2] > 1:
+            cam_choice = "pinky"
+            print("pinky")
+        else: #gravity[1] < -1 and gravity[2] > 1:
+            cam_choice = "ring"
+            print("pinky")
 
     else:
         GPIO.output(ANTENNA_2_PIN, True)
         GPIO.output(ANTENNA_1_PIN, False)
 
-        #cam_choice = "big"
-        #print("No camera chosen")
+        cam_choice = "big"
+        print("No camera chosen")
 
-        # print(f"Error reading gravity data: {gravity}")
-        # print("Chose antenna 1")
-    #return cam_choice
+        print(f"Error reading gravity data: {gravity}")
+        print("Chose antenna 1")
+    return cam_choice
 
 if __name__ == "__main__":
     main(args)

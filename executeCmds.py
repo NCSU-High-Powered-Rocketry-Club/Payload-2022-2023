@@ -1,66 +1,69 @@
-#from PIL import Image
 import imageFilter
 import random
 import RPi.GPIO as GPIO
 import re
-import ServoLib
 import takepic
-import moveServo
+from ServoLib import RocketServos
 from PIL import Image
+import moveServo
+import asyncio
 
 #example_APRS = "XX4XXX C3 A1 D4 C3 F6 C3 F6 B2 B2 C3"
 #example_APRS = "XX4XXX C3 E5 C3 D4 C3 F6 B2 C3 B2 C3"
 #APRS_clip = aprsMsg[7:]
 
 def executeCmds(APRS_clip, cam):
-    myServo = ServoLib(33, 0, 100) # Define class Servo in this file
     x = 0
     gray = 0
     randnum = 0
     print("Executing Commands")
     if cam == "big":
-        pin = 33
+        pinCam = 33
+        pinServo = 0
     elif cam == "pinky":
-        pin = 0 # Change
+        pinCam = 0 # Change
+        pinServo = 0
     elif cam == "ring":
-        pin = 0 # Change
+        pinCam = 0 # Change
+        pinServo = 0
     elif cam == "jahn":
-        pin = 0 # Change
+        pinCam = 0 # Change
+        pinServo
     else:
         print("No pin assigned for Servo")
 
     GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(pin,GPIO.OUT)
-    pwm = GPIO.PWM(pin, 50)
+    GPIO.setup(pinServo,GPIO.OUT)
+    pwm = GPIO.PWM(pinServo, 50)
 
     while x < len(APRS_clip):
         if APRS_clip[x] == "A":
-            moveServo(60,cam,pwm)
+            moveServo(-60,pwm)
             print("A1")
         elif APRS_clip[x] == "B":
-            moveServo(-60,cam,pwm) # These degrees/duty cycles are wrong, change them
+            moveServo(-60,pwm)
             print("B2")
         elif APRS_clip[x] == "C":
             # Take picture
             takepic.takepic(cam, x)
             if gray == 1: # 1 if grayscale filter has been applied
-                pic2gray = "capture_%s_%d.jpg" % (cam, x)
+                pic2gray = Image.open(f"capture_{cam}_{x}.jpg")
                 pic2gray = imageFilter.blackandwhite(pic2gray)
-                pic2gray.save("capture_%s_%d.jpg" % (cam, x))
-
+                pic2gray.save(f"capture_{cam}_{x}.jpg")
             # If randnum~=0, then a random filter has been applied
             if randnum == 1: 
-                pic2filter = "capture_%s_%d.jpg" % (cam, x)
-                pic2filter = imageFilter.fry(pic2filter)
-                pic2filter.save("capture_%s_%d.jpg" % (cam, x))
+                #pic2filter = "capture_%s_%d.jpg" % (cam, x)
+                #pic2filter = imageFilter.fry(pic2filter)
+                #pic2filter.save("capture_%s_%d.jpg" % (cam, x))
+                print('whoops cant fry lol')
             elif randnum == 2:
-                pic2filter = "capture_%s_%d.jpg" % (cam, x)
+                pic2filter = Image.open(f"capture_{cam}_{x}.jpg")
                 pic2filter = imageFilter.grassless(pic2filter)
-                pic2filter.save("capture_%s_%d.jpg" % (cam, x))
+                pic2filter.save(f"grassless_{cam}_{x}.jpg")
             elif randnum == 3:
-                pic2filter = "capture_%s_%d.jpg" % (cam, x)
+                pic2filter = Image.open(f"capture_{cam}_{x}.jpg")
                 pic2filter = imageFilter.meme(pic2filter)
-                pic2filter.save("capture_%s_%d.jpg" % (cam, x))
+                pic2filter.save(f"meme_{cam}_{x}.jpg")
             else:
                 print('Your RNG is broken')
             print("C3")
@@ -74,7 +77,7 @@ def executeCmds(APRS_clip, cam):
             print("E5")
         elif APRS_clip[x] == "F":
             # Rotate image 180deg
-            pic2rotate = "capture_%s_%d.jpg" % (cam, x-3)
+            pic2rotate = Image.open(f"capture_{cam}_{x-3}.jpg")
             pic2rotate = imageFilter.rotate180(pic2rotate)
             pic2rotate.save("capture_%s_%d.jpg" % (cam, x))
             print("F6")
