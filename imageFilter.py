@@ -1,7 +1,7 @@
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
-#import deeppyer, asyncio
+import deeppyer, asyncio
 
 async def grassless(image, x):
     image_data = image.load()
@@ -19,11 +19,12 @@ async def meme(image,x):
     I1.text((0.2*width, 0.1*height),'BOTTOM TEXT', fill=(0,0,0), font=meme_font)
     return image
 
-#async def fry(image,x):
-   # image = await deeppyer.deepfry(image)
-   # return image
-    # #image.save('fried.jpg')
-    # print("hi")
+async def fry(image,x):
+
+    image = await deeppyer.deepfry(image)
+    #return image
+    image.save(f'fried{x}.jpg')
+    #print("hi")
 
 def rotate180(image,x):
     image = image.rotate(180)
@@ -33,6 +34,7 @@ async def blackandwhite(image,x):
     bnw = image.convert("1")
     return bnw
 if __name__ == "__main__":
-    pic2filter = Image.open("capture_pinky_0.jpg")
-    rotate180(pic2filter, "bruh")
+    pic2filter = Image.open("MikeWhenHe.png")
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(fry(pic2filter, 5))
     
