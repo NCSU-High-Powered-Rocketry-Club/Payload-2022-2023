@@ -1,10 +1,5 @@
-import imageFilter
-import random
 import RPi.GPIO as GPIO
 import re
-import takepic
-from ServoLib import RocketServos
-from PIL import Image
 import moveServo
 
 GPIO.setmode(GPIO.BOARD)
