@@ -6,6 +6,7 @@ import time
 from PIL import Image
 import executeCmdsPDF  # Change for Hville
 import asyncio
+import mathutils
 
 # Necessary to prevent import issues on APRSInterface
 import sys
