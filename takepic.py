@@ -1,6 +1,8 @@
 import RPi.GPIO as gp
 import os
 
+gp.cleanup()
+
 gp.setwarnings(False)
 gp.setmode(gp.BOARD)
 gp.setup(15, gp.OUT)
