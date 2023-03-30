@@ -18,7 +18,7 @@ def takepic(topcam, x):
         capture(topcam, x)
     elif topcam == "pinky":
         print('Pinky Toe') 
-        i2c = "i2cset -y 1 0x70 0x00 0x05"
+        i2c = "i2cset -y 1 0x70 0x00 0x05" # Camera B (Pinky)
         os.system(i2c)
         gp.output(15, True)
         gp.output(16, False)
@@ -26,7 +26,7 @@ def takepic(topcam, x):
         capture(topcam, x)
     elif topcam == "ring":
         print("Ring Toe")
-        i2c = "i2cset -y 1 0x70 0x00 0x06"
+        i2c = "i2cset -y 1 0x70 0x00 0x06" # Camera C (Ring)
         os.system(i2c)
         gp.output(15, False)
         gp.output(16, True)
@@ -34,7 +34,7 @@ def takepic(topcam, x):
         capture(topcam, x)
     elif topcam == "jahn":
         print("Jahn")
-        i2c = "i2cset -y 1 0x70 0x00 0x07"
+        i2c = "i2cset -y 1 0x70 0x00 0x07" # Camera D (Jahn)
         os.system(i2c)
         gp.output(15, True)
         gp.output(16, True)

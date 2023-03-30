@@ -4,7 +4,7 @@ from enum import Enum
 from BNOInterface import BNOInterface
 import time
 from PIL import Image
-import executeCmdsPDF  # Change for Hville
+import executeCmds  # Change for Hville
 import asyncio
 import mathutils
 
@@ -106,6 +106,8 @@ class PayloadSystem:
 
         elif currentState is self.LaunchState.CAMERA:
 
+            self.cameraChoice = self.choose_antennachoose_antenna
+
             print(f"Full Message: {self.aprs_interface.aprsMsg[0]}")
 
             # The index of 7 takes out the callsign
@@ -115,7 +117,7 @@ class PayloadSystem:
             APRS_clip = self.aprs_interface.aprsMsg[0][7:]
             # Change to executeCmds for Hville
             # Execute the commands for the camera unit
-            asyncio.run(executeCmdsPDF.executeCmdsPDF(APRS_clip))
+            asyncio.run(executeCmds.executeCmds(APRS_clip, cam))
 
             self.state = self.LaunchState.RECOVER
 
@@ -140,35 +142,36 @@ class PayloadSystem:
             GPIO.output(self.ANTENNA_1_PIN, True)
             GPIO.output(self.ANTENNA_2_PIN, False)
 
-            # if gravity[1] < -1 and gravity[2] < -1:
-            #    cam_choice = "big"
-            # print("big")
-            # else: #gravity[1] > 1 and gravity[2] < -1:
-            #    cam_choice = "jahn"
-            # print("jahn")
-            # print("Chose antenna 2")
+            if gravity[1] < -1 and gravity[2] < -1:
+                cam_choice = "big"
+                print("big")
+            else: #gravity[1] > 1 and gravity[2] < -1
+                cam_choice = "jahn"
+                print("jahn")
+            print("Chose antenna 2")
 
         # choose antenna 1
         elif gravity[2] < -8.5*0.707 or gravity[1] < 8.5*0.707:
             # set output pins to output
             GPIO.output(self.ANTENNA_2_PIN, True)
             GPIO.output(self.ANTENNA_1_PIN, False)
-            # print("Chose antenna 1")
 
-            # if gravity[1] > 1 and gravity[2] > 1:
-            #    cam_choice = "pinky"
-            # print("pinky")
-            # else: #gravity[1] < -1 and gravity[2] > 1:
-            #    cam_choice = "ring"
-            # print("pinky")
+            if gravity[1] > 1 and gravity[2] > 1:
+                cam_choice = "pinky"
+                print("pinky")
+            else: #gravity[1] < -1 and gravity[2] > 1:cam_choice = "ring"
+                cam_choice = "ring"
+                print("ring")
+
+            print("Chose antenna 1")
 
         else:
             GPIO.output(self.ANTENNA_2_PIN, True)
             GPIO.output(self.ANTENNA_1_PIN, False)
 
-            #cam_choice = "big"
-            #print("No camera chosen")
+            cam_choice = "big"
+            print("No camera chosen")
 
-            # print(f"Error reading gravity data: {gravity}")
-            # print("Chose antenna 1")
-        # return cam_choice
+            print(f"Error reading gravity data: {gravity}")
+            print("Chose antenna 1")
+        return cam_choice
