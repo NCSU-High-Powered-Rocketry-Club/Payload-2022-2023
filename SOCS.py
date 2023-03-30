@@ -43,6 +43,7 @@ class PayloadSystem:
         else:
             self.aprs_interface = APRSInterface()
 
+        GPIO.cleanup()
         self.sensor = BNOInterface()
         self.state = self.LaunchState.STANDBY
 
