@@ -71,7 +71,7 @@ class PayloadSystem:
             if accel != (None, None, None):
                 self.accelerations[idx] = abs(accel[0])
 
-                idx = (idx+1) % self.AVERAGE_COUNT
+                self.idx = (self.idx+1) % self.AVERAGE_COUNT
 
                 average_accel = sum(self.accelerations) / self.AVERAGE_COUNT
                 # print(average_accel)
