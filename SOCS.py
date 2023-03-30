@@ -48,7 +48,7 @@ class PayloadSystem:
 
         # setup board
         GPIO.setwarnings(False)
-        GPIO.setmode(GPIO.BCM)
+        GPIO.setmode(GPIO.BOARD)
 
         # set output pins to output
         GPIO.setup(self.ANTENNA_1_PIN, GPIO.OUT)
@@ -106,7 +106,7 @@ class PayloadSystem:
 
         elif currentState is self.LaunchState.CAMERA:
 
-            self.cameraChoice = self.choose_antennachoose_antenna
+            self.cameraChoice = self.choose_antenna()
 
             print(f"Full Message: {self.aprs_interface.aprsMsg[0]}")
 
