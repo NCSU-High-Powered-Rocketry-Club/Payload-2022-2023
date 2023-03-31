@@ -69,7 +69,7 @@ class PayloadSystem:
             accel = self.sensor.get_linear_acceleration()
             print(accel)
             if accel != (None, None, None):
-                self.accelerations[idx] = abs(accel[0])
+                self.accelerations[self.idx] = abs(accel[0])
 
                 self.idx = (self.idx+1) % self.AVERAGE_COUNT
 
@@ -86,7 +86,7 @@ class PayloadSystem:
             # Need to check and make sure it's landed
             if time.time() > (self.delayStart + self.DESCENT_TIME):
                 # This will also be done continuously in landed state so idk
-                self.choose_antenna(self)
+                self.choose_antenna()
                 self.aprs_interface.startRecv()
 
                 self.state = self.LaunchState.LANDING
@@ -95,7 +95,7 @@ class PayloadSystem:
         elif currentState is self.LaunchState.LANDING:
             # Do landing stuff
 
-            self.choose_antenna(self)
+            self.choose_antenna()
 
             print("Number of messages: " + str(len(self.aprs_interface.aprsMsg)))
 
