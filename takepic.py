@@ -10,7 +10,7 @@ gp.setup(16, gp.OUT)
 gp.setup(18, gp.OUT)
 
 def takepic(topcam, x):
-    if topcam == "big":
+    if topcam == "big": # Camera A
         print('Big Toe')
         i2c = "i2cset -y 1 0x70 0x00 0x04" # i2c for camera A (big toe)
         os.system(i2c)
@@ -18,7 +18,7 @@ def takepic(topcam, x):
         gp.output(16, False)
         gp.output(18, True)
         capture(topcam, x)
-    elif topcam == "pinky":
+    elif topcam == "pinky": # Camera B
         print('Pinky Toe') 
         i2c = "i2cset -y 1 0x70 0x00 0x05" # Camera B (Pinky)
         os.system(i2c)
@@ -26,7 +26,7 @@ def takepic(topcam, x):
         gp.output(16, False)
         gp.output(18, True)
         capture(topcam, x)
-    elif topcam == "ring":
+    elif topcam == "ring": # Camera C
         print("Ring Toe")
         i2c = "i2cset -y 1 0x70 0x00 0x06" # Camera C (Ring)
         os.system(i2c)
@@ -34,7 +34,7 @@ def takepic(topcam, x):
         gp.output(16, True)
         gp.output(18, False)
         capture(topcam, x)
-    elif topcam == "jahn":
+    elif topcam == "jahn": # Camera D
         print("Jahn")
         i2c = "i2cset -y 1 0x70 0x00 0x07" # Camera D (Jahn)
         os.system(i2c)
