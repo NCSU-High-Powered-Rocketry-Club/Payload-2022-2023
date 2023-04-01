@@ -137,8 +137,8 @@ class PayloadSystem:
         except:
             return
 
-        # choose antenna 2
-        if gravity[2] < 0: # or gravity[1] < -8.5*0.707:
+        # choose antenna 1
+        if gravity[2] >= 0: # or gravity[1] < -8.5*0.707:
             # set output pins to output
             GPIO.output(self.ANTENNA_1_PIN, True)
             GPIO.output(self.ANTENNA_2_PIN, False)
@@ -153,9 +153,9 @@ class PayloadSystem:
                 print("jahn")
                 print(gravity)
                 #time.sleep(1)
-            print("Chose antenna 2")
-        # choose antenna 1
-        elif gravity[2] > 0: # or gravity[1] > 8.5*0.707: 
+            print("Chose antenna 1")
+        # choose antenna 2
+        elif gravity[2] < 0: # or gravity[1] > 8.5*0.707: 
             # set output pins to output
             GPIO.output(self.ANTENNA_2_PIN, True)
             GPIO.output(self.ANTENNA_1_PIN, False)
@@ -171,7 +171,7 @@ class PayloadSystem:
                 print(gravity)
                 #time.sleep(1)
 
-            print("Chose antenna 1")
+            print("Chose antenna 2")
 
         else:
             GPIO.output(self.ANTENNA_2_PIN, True)
