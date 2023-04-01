@@ -146,9 +146,11 @@ class PayloadSystem:
             if gravity[1] < -1 and gravity[2] < -1: 
                 cam_choice = "big" # Camera A
                 print("big")
+                print(gravity)
             else: #gravity[1] > 1 and gravity[2] < -1 
                 cam_choice = "jahn" # Camera D
                 print("jahn")
+                print(gravity)
             print("Chose antenna 2")
 
         # choose antenna 1
@@ -160,9 +162,11 @@ class PayloadSystem:
             if gravity[1] > 1 and gravity[2] > 1: 
                 cam_choice = "pinky" # Camera B
                 print("pinky")
+                print(gravity)
             else: #gravity[1] < -1 and gravity[2] > 1:cam_choice = "ring" 
                 cam_choice = "ring" # Camera C
                 print("ring")
+                print(gravity)
 
             print("Chose antenna 1")
 
@@ -176,3 +180,4 @@ class PayloadSystem:
             print(f"Error reading gravity data: {gravity}")
             print("Chose antenna 1")
         return cam_choice
+        time.sleep(1)
