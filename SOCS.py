@@ -143,25 +143,25 @@ class PayloadSystem:
             GPIO.output(self.ANTENNA_1_PIN, True)
             GPIO.output(self.ANTENNA_2_PIN, False)
 
-            if gravity[1] < -1 and gravity[2] < -1:
-                cam_choice = "big"
+            if gravity[1] < -1 and gravity[2] < -1: 
+                cam_choice = "big" # Camera A
                 print("big")
-            else: #gravity[1] > 1 and gravity[2] < -1
-                cam_choice = "jahn"
+            else: #gravity[1] > 1 and gravity[2] < -1 
+                cam_choice = "jahn" # Camera D
                 print("jahn")
             print("Chose antenna 2")
 
         # choose antenna 1
-        elif gravity[2] < -8.5*0.707 or gravity[1] < 8.5*0.707:
+        elif gravity[2] < -8.5*0.707 or gravity[1] > 8.5*0.707: 
             # set output pins to output
             GPIO.output(self.ANTENNA_2_PIN, True)
             GPIO.output(self.ANTENNA_1_PIN, False)
 
-            if gravity[1] > 1 and gravity[2] > 1:
-                cam_choice = "pinky"
+            if gravity[1] > 1 and gravity[2] > 1: 
+                cam_choice = "pinky" # Camera B
                 print("pinky")
-            else: #gravity[1] < -1 and gravity[2] > 1:cam_choice = "ring"
-                cam_choice = "ring"
+            else: #gravity[1] < -1 and gravity[2] > 1:cam_choice = "ring" 
+                cam_choice = "ring" # Camera C
                 print("ring")
 
             print("Chose antenna 1")
