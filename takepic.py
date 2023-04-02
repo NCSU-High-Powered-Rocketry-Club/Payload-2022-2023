@@ -1,46 +1,46 @@
-import RPi.GPIO as gp
+import RPi.GPIO as GPIO
 import os
 
-gp.cleanup()
+#gp.cleanup()
 
-gp.setwarnings(False)
-#gp.setmode(gp.BOARD)
-gp.setup(15, gp.OUT)
-gp.setup(16, gp.OUT)
-gp.setup(18, gp.OUT)
+#gp.setwarnings(False)
+#GPIO.setmode(GPIO.BOARD)
+GPIO.setup(15, GPIO.OUT)
+GPIO.setup(16, GPIO.OUT)
+GPIO.setup(18, GPIO.OUT)
 
 def takepic(topcam, x):
     if topcam == "big": # Camera A
         print('Big Toe')
         i2c = "i2cset -y 1 0x70 0x00 0x04" # i2c for camera A (big toe)
         os.system(i2c)
-        gp.output(15, False)
-        gp.output(16, False)
-        gp.output(18, True)
+        GPIO.output(15, False)
+        GPIO.output(16, False)
+        GPIO.output(18, True)
         capture(topcam, x)
     elif topcam == "pinky": # Camera B
         print('Pinky Toe') 
         i2c = "i2cset -y 1 0x70 0x00 0x05" # Camera B (Pinky)
         os.system(i2c)
-        gp.output(15, True)
-        gp.output(16, False)
-        gp.output(18, True)
+        GPIO.output(15, True)
+        GPIO.output(16, False)
+        GPIO.output(18, True)
         capture(topcam, x)
     elif topcam == "ring": # Camera C
         print("Ring Toe")
         i2c = "i2cset -y 1 0x70 0x00 0x06" # Camera C (Ring)
         os.system(i2c)
-        gp.output(15, False)
-        gp.output(16, True)
-        gp.output(18, False)
+        GPIO.output(15, False)
+        GPIO.output(16, True)
+        GPIO.output(18, False)
         capture(topcam, x)
     elif topcam == "jahn": # Camera D
         print("Jahn")
         i2c = "i2cset -y 1 0x70 0x00 0x07" # Camera D (Jahn)
         os.system(i2c)
-        gp.output(15, True)
-        gp.output(16, True)
-        gp.output(18, False)
+        GPIO.output(15, True)
+        GPIO.output(16, True)
+        GPIO.output(18, False)
         capture(topcam, x)
     else:
         print("uh oh")

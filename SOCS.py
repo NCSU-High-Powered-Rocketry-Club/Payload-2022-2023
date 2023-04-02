@@ -84,6 +84,7 @@ class PayloadSystem:
         elif currentState is self.LaunchState.LAUNCH:
             # Do launch stuff
             # Need to check and make sure it's landed
+            
             if time.time() > (self.delayStart + self.DESCENT_TIME):
                 # This will also be done continuously in landed state so idk
                 self.choose_antenna()
@@ -94,7 +95,7 @@ class PayloadSystem:
 
         elif currentState is self.LaunchState.LANDING:
             # Do landing stuff
-
+            
             self.choose_antenna()
 
             print("Number of messages: " + str(len(self.aprs_interface.aprsMsg)))
@@ -106,7 +107,7 @@ class PayloadSystem:
                 self.state = self.LaunchState.CAMERA
 
         elif currentState is self.LaunchState.CAMERA:
-
+            
             self.cameraChoice = self.choose_antenna()
 
             print(f"Full Message: {self.aprs_interface.aprsMsg[0]}")

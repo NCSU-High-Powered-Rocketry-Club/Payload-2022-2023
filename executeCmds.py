@@ -3,7 +3,7 @@ import random
 import RPi.GPIO as GPIO
 import re
 import takepic
-from ServoLib import RocketServos
+#from ServoLib import RocketServos
 from PIL import Image
 import moveServo
 import asyncio
@@ -37,7 +37,7 @@ def executeCmds(APRS_clip, cam):
         pinServo = 22 # big = default
         print("No pin assigned for servo, green servo chosen")
 
-    GPIO.setmode(GPIO.BOARD)
+    #GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pinServo,GPIO.OUT)
     pwm = GPIO.PWM(pinServo, 500)
 
