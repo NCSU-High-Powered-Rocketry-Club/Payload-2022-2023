@@ -160,3 +160,61 @@ Info: 3546.27N\07840.44WO329/000/A=000306
 04/02/2023 02:52:37 AM Using selector: EpollSelector
 04/02/2023 03:04:20 AM Using selector: EpollSelector
 04/02/2023 06:39:50 PM Using selector: EpollSelector
+04/02/2023 06:50:04 PM Using selector: EpollSelector
+04/02/2023 07:00:32 PM Using selector: EpollSelector
+04/02/2023 07:10:00 PM Using selector: EpollSelector
+04/02/2023 07:20:52 PM Using selector: EpollSelector
+04/02/2023 07:56:05 PM Using selector: EpollSelector
+04/02/2023 07:56:14 PM Packet checksum is e3a3708176c2e7430d9cc3ca16d8090f
+04/02/2023 07:56:14 PM Raw packet: KQ4EJQ-5>APDR16,WIDE1-1::WORLD    :XX4XXX A1 C3{9
+04/02/2023 07:56:14 PM Destination length is 6
+04/02/2023 07:56:14 PM Packet is a message packet
+04/02/2023 07:56:14 PM WIDE1-1
+04/02/2023 07:56:14 PM Message is addressed to WORLD    , message is XX4XXX A1 C3{9
+04/02/2023 07:56:14 PM Message has message ID 9
+04/02/2023 07:56:14 PM ----New data----
+Raw data from KISS: b'\x00\x82\xa0\x88\xa4bl\xe0\x96\xa2h\x8a\x94\xa2j\xae\x92\x88\x8ab@c\x03\xf0:WORLD    :XX4XXX A1 C3{9'
+Parsed APRS frame: KQ4EJQ-5>APDR16,WIDE1-1::WORLD    :XX4XXX A1 C3{9
+APRS Packet: <MessagePacket: KQ4EJQ-5 -> WORLD>
+Source: KQ4EJQ-5
+Destination: APDR16
+Path: WIDE1-1
+Timestamp: None
+Info: WORLD    :XX4XXX A1 C3{9
+Message: XX4XXX A1 C3
+04/02/2023 07:57:49 PM Using selector: EpollSelector
+04/02/2023 07:58:05 PM Packet checksum is e3a3708176c2e7430d9cc3ca16d8090f
+04/02/2023 07:58:05 PM Raw packet: KQ4EJQ-5>APDR16,WIDE1-1::WORLD    :XX4XXX A1 C3{9
+04/02/2023 07:58:05 PM Destination length is 6
+04/02/2023 07:58:05 PM Packet is a message packet
+04/02/2023 07:58:05 PM WIDE1-1
+04/02/2023 07:58:05 PM Message is addressed to WORLD    , message is XX4XXX A1 C3{9
+04/02/2023 07:58:05 PM Message has message ID 9
+04/02/2023 07:58:05 PM ----New data----
+Raw data from KISS: b'\x00\x82\xa0\x88\xa4bl\xe0\x96\xa2h\x8a\x94\xa2j\xae\x92\x88\x8ab@c\x03\xf0:WORLD    :XX4XXX A1 C3{9'
+Parsed APRS frame: KQ4EJQ-5>APDR16,WIDE1-1::WORLD    :XX4XXX A1 C3{9
+APRS Packet: <MessagePacket: KQ4EJQ-5 -> WORLD>
+Source: KQ4EJQ-5
+Destination: APDR16
+Path: WIDE1-1
+Timestamp: None
+Info: WORLD    :XX4XXX A1 C3{9
+Message: XX4XXX A1 C3
+04/02/2023 08:00:14 PM Using selector: EpollSelector
+04/02/2023 08:00:23 PM Packet checksum is e3a3708176c2e7430d9cc3ca16d8090f
+04/02/2023 08:00:23 PM Raw packet: KQ4EJQ-5>APDR16,WIDE1-1::WORLD    :XX4XXX A1 C3{9
+04/02/2023 08:00:23 PM Destination length is 6
+04/02/2023 08:00:23 PM Packet is a message packet
+04/02/2023 08:00:23 PM WIDE1-1
+04/02/2023 08:00:23 PM Message is addressed to WORLD    , message is XX4XXX A1 C3{9
+04/02/2023 08:00:23 PM Message has message ID 9
+04/02/2023 08:00:23 PM ----New data----
+Raw data from KISS: b'\x00\x82\xa0\x88\xa4bl\xe0\x96\xa2h\x8a\x94\xa2j\xae\x92\x88\x8ab@c\x03\xf0:WORLD    :XX4XXX A1 C3{9'
+Parsed APRS frame: KQ4EJQ-5>APDR16,WIDE1-1::WORLD    :XX4XXX A1 C3{9
+APRS Packet: <MessagePacket: KQ4EJQ-5 -> WORLD>
+Source: KQ4EJQ-5
+Destination: APDR16
+Path: WIDE1-1
+Timestamp: None
+Info: WORLD    :XX4XXX A1 C3{9
+Message: XX4XXX A1 C3

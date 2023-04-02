@@ -83,11 +83,11 @@ class PayloadSystem:
 
         elif currentState is self.LaunchState.LAUNCH:
             # Do launch stuff
-            # Need to check and make sure it's landed
+            # Need to check aand make sure it's landed
             
             if time.time() > (self.delayStart + self.DESCENT_TIME):
                 # This will also be done continuously in landed state so idk
-                self.choose_antenna()
+                cam_choice = self.choose_antenna()
                 self.aprs_interface.startRecv()
 
                 self.state = self.LaunchState.LANDING
@@ -97,7 +97,7 @@ class PayloadSystem:
             # Do landing stuff
             
             self.choose_antenna()
-
+            
             print("Number of messages: " + str(len(self.aprs_interface.aprsMsg)))
 
             # Need to check that the callsign is actually from NASA; must add that here
@@ -119,7 +119,7 @@ class PayloadSystem:
             APRS_clip = self.aprs_interface.aprsMsg[0][7:]
             # Change to executeCmds for Hville
             # Execute the commands for the camera unit
-            asyncio.run(executeCmds.executeCmds(APRS_clip, cam))
+            asyncio.run(executeCmds.executeCmds(APRS_clip, cam_choice))
 
             self.state = self.LaunchState.RECOVER
 
