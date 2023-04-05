@@ -19,11 +19,11 @@ def meme(image: Image):
     I1.text((0.2*width, 0.1*height),'BOTTOM TEXT', fill=(0,0,0), font=meme_font)
     return image
 
-async def fry(image: Image,x):
-    # TODO: Fix (installing deeppyer takes forever
+#async def fry(image: Image,x):
+    # Fix (installing deeppyer takes forever
     # image = await deeppyer.deepfry(image)
     #return image
-    image.save(f'fried{x}.jpg')
+    #image.save(f'fried{x}.jpg')
     #print("hi")
 
 def rotate180(image: Image,x):

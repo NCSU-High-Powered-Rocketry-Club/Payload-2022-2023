@@ -110,7 +110,7 @@ def executeCmds(APRS_clip, cam):
 
         elif APRS_clip[x] == "G": # Special effects filter
             print("G7")
-            randnum = random.randint(1,3)
+            randnum = random.randint(2,3)
 
         elif APRS_clip[x] == "H": # Clear all filters
             randnum = 0
