@@ -1,7 +1,7 @@
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
-import deeppyer, asyncio
+# import deeppyer, asyncio
 import datetime
 
 def grassless(image: Image):
@@ -20,8 +20,8 @@ def meme(image: Image):
     return image
 
 async def fry(image: Image,x):
-
-    image = await deeppyer.deepfry(image)
+    # TODO: Fix (installing deeppyer takes forever
+    # image = await deeppyer.deepfry(image)
     #return image
     image.save(f'fried{x}.jpg')
     #print("hi")
