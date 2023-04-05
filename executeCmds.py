@@ -23,19 +23,21 @@ def executeCmds(APRS_clip, cam):
 
     # Executing commands
     print("Executing Commands")
+
+    pinServo = 24
     
     # Servo pins based on 
-    if cam == "big":
-        pinServo = 22
-    elif cam == "pinky":
-        pinServo = 23
-    elif cam == "ring":
-        pinServo = 21
-    elif cam == "jahn":
-        pinServo = 24
-    else:
-        pinServo = 22 # big = default
-        print("No pin assigned for servo, green servo chosen")
+    #if cam == "big":
+    #    pinServo = 22
+    #elif cam == "pinky":
+    #    pinServo = 23
+    #elif cam == "ring":
+    #    pinServo = 21
+    #elif cam == "jahn":
+    #    pinServo = 24
+    #else:
+    #    pinServo = 22 # big = default
+    #    print("No pin assigned for servo, green servo chosen")
 
     #GPIO.setmode(GPIO.BOARD)
     GPIO.setup(pinServo,GPIO.OUT)
