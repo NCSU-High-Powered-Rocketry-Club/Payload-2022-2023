@@ -48,7 +48,7 @@ class PayloadSystem:
 
         # setup board
         GPIO.setwarnings(False)
-        GPIO.setmode(GPIO.BOARD)
+        GPIO.setmode(GPIO.BCM)
 
         # set output pins to output
         GPIO.setup(self.ANTENNA_1_PIN, GPIO.OUT)
