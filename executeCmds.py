@@ -24,7 +24,7 @@ def executeCmds(APRS_clip, cam):
     # Executing commands
     print("Executing Commands")
 
-    pinServo = 24
+    pinServo = 8
     
     # Servo pins based on 
     #if cam == "big":
@@ -39,7 +39,7 @@ def executeCmds(APRS_clip, cam):
     #    pinServo = 22 # big = default
     #    print("No pin assigned for servo, green servo chosen")
 
-    #GPIO.setmode(GPIO.BOARD)
+    #GPIO.setmode(GPIO.BCM)
     GPIO.setup(pinServo,GPIO.OUT)
     pwm = GPIO.PWM(pinServo, 500)
 
@@ -90,7 +90,7 @@ def executeCmds(APRS_clip, cam):
                 pic2filter = imageFilter.meme(pic2filter)
                 pic2filter.save(f"meme_{cam}_{x}.jpg")
                 picName = f"meme_{cam}_{x}.jpg" # Current image path name
-            else:
+            elif randnum != 0:
                 print('Your RNG is broken')
             timeStamper.timeStamper(currentTime, picName) # Replace unfiltered img w/ timestamped image
             print("C3")
