@@ -6,10 +6,10 @@ import datetime
 
 def grassless(image: Image):
     width, height = image.size
-    for loop1 in range(height):
-        for loop2 in range(width):
-            r,g,b = image[loop1,loop2]
-            image[loop1,loop2] = r,0,b
+    for y in range(height):
+        for x in range(width):
+            r,_,b = image[y][x]
+            image[y][x] = r,0,b
     return image
 
 def meme(image: Image):
@@ -26,9 +26,9 @@ def meme(image: Image):
     #image.save(f'fried{x}.jpg')
     #print("hi")
 
-def rotate180(cam,image: Image,x):
+def rotate180(image: Image,x):
     image_data = image.rotate(180)
-    image_data.save('capture_%s_%d.jpg' % (cam,x))
+    image_data.save('rotated_%d.jpg' % x)
 
 async def blackandwhite(image: Image,x):
     bnw = image.convert("1")
