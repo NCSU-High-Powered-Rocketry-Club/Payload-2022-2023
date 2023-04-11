@@ -26,8 +26,8 @@ class PayloadSystem:
     AVERAGE_COUNT = 250
 
     # these are the GPIO pins we are controlling the relay switch with
-    ANTENNA_1_PIN = 11
-    ANTENNA_2_PIN = 13
+    ANTENNA_1_PIN = 17
+    ANTENNA_2_PIN = 27
 
     # rocket state
     class LaunchState(Enum):

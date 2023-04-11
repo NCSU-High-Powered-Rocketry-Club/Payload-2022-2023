@@ -24,7 +24,7 @@ def executeCmds(APRS_clip, cam):
     # Executing commands
     print("Executing Commands")
 
-    pinServo = 24
+    pinServo = 8
     
     # Servo pins based on 
     #if cam == "big":
