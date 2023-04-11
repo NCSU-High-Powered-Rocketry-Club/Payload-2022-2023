@@ -140,20 +140,20 @@ class PayloadSystem:
         # choose antenna 1
         if gravity[1] >= 0: # or gravity[1] < -8.5*0.707:
             # set output pins to output
-            GPIO.output(self.ANTENNA_1_PIN, False)
-            GPIO.output(self.ANTENNA_2_PIN, True)
+            GPIO.output(self.ANTENNA_1_PIN, True)
+            GPIO.output(self.ANTENNA_2_PIN, False)
 
             if gravity[0] > 6: #and gravity[2] < -1: 
-                cam_choice = "big" # Camera A
-                print("Big, rotate bay")
-                print(gravity)
+                cam_choice = "ring" # Camera A
+                print("Ring, rotate bay")
+                #print(gravity)
                 #time.sleep(1)
             else: #gravity[1] > 1 and gravity[2] < -1 
-                cam_choice = "pinky" # Camera D
-                print("Pinky, correct bay")
-                print(gravity)
+                cam_choice = "big" # Camera D
+                print("Big, rotate bay")
+                #print(gravity)
                 #time.sleep(1)
-            print("Chose antenna 1")
+            print("Chose antenna 2")
         # choose antenna 2
         elif gravity[1] < 0: # or gravity[1] > 8.5*0.707: 
             # set output pins to output
@@ -163,27 +163,27 @@ class PayloadSystem:
             if gravity[0] > 6: # and gravity[2] > 1: 
                 cam_choice = "jahn" # Camera B
                 print("Jahn, rotate bay")
-                print(gravity)
+                #print(gravity)
                 #time.sleep(1)
             else: #gravity[1] < -1 and gravity[2] > 1:cam_choice = "ring" 
-                cam_choice = "big" #Camera C
-                print("Big, rotate bay")
-                print(gravity)
+                cam_choice = "pinky" #Camera C
+                print("Pinky, correct choice")
+                #print(gravity)
                 #time.sleep(1)
 
-            print("Chose antenna 2")
+            print("Chose antenna 1")
 
         else:
             GPIO.output(self.ANTENNA_2_PIN, True)
             GPIO.output(self.ANTENNA_1_PIN, False)
 
-            cam_choice = "big"
+            cam_choice = "pinky"
             #print("No camera chosen")
 
-            #print(f"Error reading gravity data: {gravity}")
+            print(f"Error reading gravity data: {gravity}")
             print(gravity)
             time.sleep(1)
             #print("Chose antenna 1")
-        print("Pinky is the only one that should be chosen, it should be up")
+        #print("Pinky is the only one that should be chosen, it should be up")
         cam_choice = "pinky"
         return cam_choice
