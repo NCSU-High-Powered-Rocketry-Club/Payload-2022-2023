@@ -26,9 +26,9 @@ def meme(image: Image):
     #image.save(f'fried{x}.jpg')
     #print("hi")
 
-def rotate180(image: Image,x):
+def rotate180(cam,image: Image,x):
     image_data = image.rotate(180)
-    image_data.save('rotated_%d.jpg' % x)
+    image_data.save('capture_%s_%d.jpg' % (cam,x))
 
 async def blackandwhite(image: Image,x):
     bnw = image.convert("1")

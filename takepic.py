@@ -6,3 +6,4 @@ def takepic(cam, x):
     stringy = f"capture_{cam}_{x}.jpg"
     camera.capture(stringy)
     print("Captured image")
+    camera.close()

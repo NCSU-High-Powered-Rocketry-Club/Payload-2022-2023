@@ -106,8 +106,8 @@ def executeCmds(APRS_clip, cam):
         elif APRS_clip[x] == "F": # Rotate image 180deg
             #pic2rotate = Image.open(f"capture_{cam}_{x-3}.jpg")
             pic2rotate = Image.open(picName)
-            pic2rotate = imageFilter.rotate180(pic2rotate,x)
-            pic2rotate.save("capture_%s_%d.jpg" % (cam, x))
+            pic2rotate = imageFilter.rotate180(cam,pic2rotate,x)
+            #pic2rotate.save("capture_%s_%d.jpg" % (cam, x))
             print("F6")
 
         elif APRS_clip[x] == "G": # Special effects filter
