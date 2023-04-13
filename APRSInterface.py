@@ -91,6 +91,7 @@ class APRSInterface:
         logMsgs = []
         # Turn raw input bytes from KISS into an APRS frame
         newFrame = aprs.parse_frame(raw_data)
+        newFrame = str(newFrame).replace("-6",'')
 
         logMsgs.append("Parsed APRS frame: " + str(newFrame))
         logging.debug("\n".join(logMsgs))
