@@ -126,7 +126,7 @@ class PayloadSystem:
                     # Execute the commands for the camera unit
                     executeCmds.executeCmds(APRS_clip, self.cameraChoice, f"./capture{count}/")
 
-                    time.sleep(300)
+                    time.sleep(30)
                     count+=1
             except KeyboardInterrupt:
                 pass
