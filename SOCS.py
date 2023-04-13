@@ -112,13 +112,13 @@ class PayloadSystem:
             print(f"Full Message: {self.aprs_interface.aprsMsg[0]}")
 
             # The index of 7 takes out the callsign
-            print(f"Sliced Message: {self.aprs_interface.aprsMsg[0][7:]}")
+            # print(f"Sliced Message: {self.aprs_interface.aprsMsg[0][7:]}")
 
             # The index of 7 takes out the callsign
-            APRS_clip = self.aprs_interface.aprsMsg[0][7:]
+            APRS_clip = self.aprs_interface.aprsMsg[0]#[7:]
             # Change to executeCmds for Hville
             # Execute the commands for the camera unit
-            asyncio.run(executeCmds.executeCmds(APRS_clip, cam_choice))
+            asyncio.run(executeCmds.executeCmds(APRS_clip, self.cameraChoice))
 
             self.state = self.LaunchState.RECOVER
 
