@@ -118,6 +118,8 @@ def executeCmds(APRS_clip, cam):
             randnum = 0
             gray = 0
             print("H8")
+        elif APRS_clip[x] == '1':
+            print("ignoring _1 at end")
 
         else:
             print("Either indexing is wrong or the received msg is off-center")
