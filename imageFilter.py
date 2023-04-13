@@ -5,18 +5,17 @@ from PIL import ImageFont
 import datetime
 
 def grassless(image: Image):
-    width, height = image.size
-    for y in range(height):
-        for x in range(width):
-            r,_,b = image[y][x]
-            image[y][x] = r,0,b
+    matrix = (1,0,0,0,
+            0,0,0,0,
+            0,0,1,0)
+    image = image.convert("RGB", matrix)
     return image
 
 def meme(image: Image):
     height, width = image.size
     I1 = ImageDraw.Draw(image)
     meme_font = ImageFont.truetype('impact.ttf', 200)
-    I1.text((0.2*width, 0.1*height),'BOTTOM TEXT', fill=(0,0,0), font=meme_font)
+    I1.text((0.2*width, 0.1*height),'BOTTOM TEXT', fill=(57,255,20), font=meme_font)
     return image
 
 #async def fry(image: Image,x):
@@ -30,7 +29,7 @@ def rotate180(image: Image,x):
     image_data = image.rotate(180)
     image_data.save('rotated_%d.jpg' % x)
 
-async def blackandwhite(image: Image,x):
+def blackandwhite(image: Image,x):
     bnw = image.convert("1")
     return bnw
 if __name__ == "__main__":

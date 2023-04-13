@@ -39,7 +39,7 @@ def executeCmds(APRS_clip, cam):
     #    pinServo = 22 # big = default
     #    print("No pin assigned for servo, green servo chosen")
 
-    GPIO.setmode(GPIO.BCM)
+    #GPIO.setmode(GPIO.BCM)
     GPIO.setup(pinServo,GPIO.OUT)
     pwm = GPIO.PWM(pinServo, 500)
 
@@ -70,9 +70,9 @@ def executeCmds(APRS_clip, cam):
             
             if gray == 1: # 1 if grayscale filter applied
                 pic2gray = Image.open(picName)
-                pic2gray = imageFilter.blackandwhite(pic2gray)
+                pic2gray = imageFilter.blackandwhite(pic2gray,x)
                 pic2gray.save(f"gray_{cam}_{x}.jpg")
-                picName = f"gray_{cam}_{x}.jpg" # Current image path name
+                #picName = f"gray_{cam}_{x}.jpg" # Current image path name
             
             # If randnum~=0, then a random filter has been applied
             if randnum == 1:
@@ -106,7 +106,7 @@ def executeCmds(APRS_clip, cam):
         elif APRS_clip[x] == "F": # Rotate image 180deg
             #pic2rotate = Image.open(f"capture_{cam}_{x-3}.jpg")
             pic2rotate = Image.open(picName)
-            pic2rotate = imageFilter.rotate180(cam,pic2rotate,x)
+            pic2rotate = imageFilter.rotate180(pic2rotate,x)
             #pic2rotate.save("capture_%s_%d.jpg" % (cam, x))
             print("F6")
 
@@ -122,5 +122,3 @@ def executeCmds(APRS_clip, cam):
         else:
             print("Either indexing is wrong or the received msg is off-center")
         x = x + 3
-
-executeCmds("B2 C3 F6 A1 G7 C3", "pinky")
