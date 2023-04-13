@@ -224,3 +224,7 @@ Message: XX4XXX A1 C3
 04/11/2023 01:28:04 AM Using selector: EpollSelector
 04/11/2023 11:45:47 PM Using selector: EpollSelector
 04/13/2023 03:28:49 AM Using selector: EpollSelector
+04/13/2023 03:40:12 AM Using selector: EpollSelector
+04/13/2023 03:40:34 AM failed to parse message lmao
+04/13/2023 04:02:33 AM Using selector: EpollSelector
+04/13/2023 04:02:46 AM failed to parse message lmao
