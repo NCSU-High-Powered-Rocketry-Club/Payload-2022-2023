@@ -111,8 +111,7 @@ class APRSInterface:
         # Print message if this is a message packet
         # (there may be a better way to check packet type, but this works)
         # Create a global variable aprsMsg that can be used to execute cmds
-        print(str(packet))
-        if str(packet).startswith("<MessagePacket"):
+        if str(packet).startswith("<MIC-E"):
             logMsgs.append("Message: " + str(packet.message))
             self.aprsMsg.append(str(packet.message))
 
