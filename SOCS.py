@@ -118,7 +118,7 @@ class PayloadSystem:
             APRS_clip = self.aprs_interface.aprsMsg[0]#[7:]
             # Change to executeCmds for Hville
             # Execute the commands for the camera unit
-            asyncio.run(executeCmds.executeCmds(APRS_clip, self.cameraChoice))
+            executeCmds.executeCmds(APRS_clip, self.cameraChoice)
 
             self.state = self.LaunchState.RECOVER
 
