@@ -63,7 +63,7 @@ def executeCmds(APRS_clip, cam, folder_name):
             print("B2")
         
         elif APRS_clip[x] == "C": # Take picture
-            takepic.takepic(cam, x)
+            takepic.takepic(cam, x, folder_name)
             currentTime = datetime.now()
             picName = f"{folder_name}capture_{cam}_{x}.jpg" # Current image path name
             timeStamper.timeStamper(currentTime, picName) # Replace unfiltered img w/ timestamped image
