@@ -96,25 +96,29 @@ class APRSInterface:
         logMsgs.append("Parsed APRS frame: " + str(newFrame))
         logging.debug("\n".join(logMsgs))
 
-        logMsgs = []
-        # Turn the APRS frame into an aprspy library APRS object because
-        # only aprspy has actual documentation on reading the data
-        packet = aprspy.APRS.parse(str(newFrame), strict_mode=False)
+        self.aprsMsg.append(newFrame[24:])
+        logMsgs.append("Message: " + newFrame[24:])
+        print(newFrame[24:])
 
-        # Print data common to all packet types
-        logMsgs.append(f"APRS Packet: {str(packet)}")
-        logMsgs.append(f"Source: {str(packet.source)}")
-        logMsgs.append(f"Destination: {str(packet.destination)}")
-        logMsgs.append(f"Path: {str(packet.path)}")
-        logMsgs.append(f"Timestamp: {str(packet.timestamp)}")
-        logMsgs.append(f"Info: {str(packet.info)}")
+        # logMsgs = []
+        # # Turn the APRS frame into an aprspy library APRS object because
+        # # only aprspy has actual documentation on reading the data
+        # packet = aprspy.APRS.parse(str(newFrame), strict_mode=False)
 
-        # Print message if this is a message packet
-        # (there may be a better way to check packet type, but this works)
-        # Create a global variable aprsMsg that can be used to execute cmds
-        if str(packet).startswith("<MIC-E"):
-            logMsgs.append("Message: " + str(packet.message))
-            self.aprsMsg.append(str(packet.message))
+        # # Print data common to all packet types
+        # logMsgs.append(f"APRS Packet: {str(packet)}")
+        # logMsgs.append(f"Source: {str(packet.source)}")
+        # logMsgs.append(f"Destination: {str(packet.destination)}")
+        # logMsgs.append(f"Path: {str(packet.path)}")
+        # logMsgs.append(f"Timestamp: {str(packet.timestamp)}")
+        # logMsgs.append(f"Info: {str(packet.info)}")
+
+        # # Print message if this is a message packet
+        # # (there may be a better way to check packet type, but this works)
+        # # Create a global variable aprsMsg that can be used to execute cmds
+        # if str(packet).startswith("<MIC-E"):
+        #     logMsgs.append("Message: " + str(packet.message))
+        #     self.aprsMsg.append(str(packet.message))
 
         # Join all the messages together and log it as one debug message
         logging.debug("\n".join(logMsgs))
