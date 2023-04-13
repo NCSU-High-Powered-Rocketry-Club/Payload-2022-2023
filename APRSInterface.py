@@ -98,7 +98,7 @@ class APRSInterface:
         logMsgs = []
         # Turn the APRS frame into an aprspy library APRS object because
         # only aprspy has actual documentation on reading the data
-        packet = aprspy.APRS.parse(str(newFrame))
+        packet = aprspy.APRS.parse(str(newFrame), strict_mode=False)
 
         # Print data common to all packet types
         logMsgs.append(f"APRS Packet: {str(packet)}")
