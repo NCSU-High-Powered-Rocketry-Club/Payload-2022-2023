@@ -228,3 +228,443 @@ Message: XX4XXX A1 C3
 04/13/2023 03:40:34 AM failed to parse message lmao
 04/13/2023 04:02:33 AM Using selector: EpollSelector
 04/13/2023 04:02:46 AM failed to parse message lmao
+04/13/2023 06:06:59 PM Using selector: EpollSelector
+04/13/2023 06:07:23 PM ----New data----
+Raw data from KISS: b'\x00\xa6\xa8\xb4\xb4\x98\xb4`\x96\xa2h\x86\xa8\x98\xed\x03\xf0`rX\x1cl \x1cX/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1\r'
+04/13/2023 06:07:23 PM Parsed APRS frame: KQ4CTL-6>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:07:23 PM Returning generic packet for: KQ4CTL-6>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:28:32 PM Using selector: EpollSelector
+04/13/2023 06:28:59 PM ----New data----
+Raw data from KISS: b'\x00\xa6\xa8\xb4\xb4\x98\xb4`\x96\xa2h\x86\xa8\x98\xed\x03\xf0`rX\x1cl \x1cX/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1\r'
+04/13/2023 06:28:59 PM Parsed APRS frame: KQ4CTL-6>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:28:59 PM Returning generic packet for: KQ4CTL-6>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:36:49 PM Using selector: EpollSelector
+04/13/2023 06:37:23 PM ----New data----
+Raw data from KISS: b'\x00\xa6\xa8\xb4\xb4\x98\xb4`\x96\xa2h\x86\xa8\x98\xed\x03\xf0`rX\x1cl \x1cX/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1\r'
+04/13/2023 06:37:23 PM Parsed APRS frame: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:37:23 PM Returning generic packet for: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:40:48 PM Using selector: EpollSelector
+04/13/2023 06:40:59 PM ----New data----
+Raw data from KISS: b'\x00\xa6\xa8\xb4\xb4\x98\xb4`\x96\xa2h\x86\xa8\x98\xed\x03\xf0`rX\x1cl \x1cX/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1\r'
+04/13/2023 06:40:59 PM Parsed APRS frame: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:40:59 PM Returning generic packet for: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:45:51 PM Using selector: EpollSelector
+04/13/2023 06:46:23 PM ----New data----
+Raw data from KISS: b'\x00\xa6\xa8\xb4\xb4\x98\xb4`\x96\xa2h\x86\xa8\x98\xed\x03\xf0`rX\x1cl \x1cX/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1\r'
+04/13/2023 06:46:23 PM Parsed APRS frame: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:46:23 PM Parsed APRS frame: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+Message: C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:48:58 PM Using selector: EpollSelector
+04/13/2023 06:49:22 PM ----New data----
+Raw data from KISS: b'\x00\xa6\xa8\xb4\xb4\x98\xb4`\x96\xa2h\x86\xa8\x98\xed\x03\xf0`rX\x1cl \x1cX/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1\r'
+04/13/2023 06:49:23 PM Parsed APRS frame: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:49:23 PM Parsed APRS frame: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+Message: C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:49:23 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:49:23 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:49:23 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:49:23 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:49:23 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:49:23 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:49:23 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:49:23 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:49:23\x00'
+04/13/2023 06:49:23 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:49:23 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:49:23 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:49:23 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:49:23 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:49:23 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:49:23 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:49:23 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:49:23\x00'
+04/13/2023 06:49:23 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:49:23\x00'
+04/13/2023 06:49:23 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:49:23 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:49:23 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:49:23 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00\x13\x00\x00\x00d'
+04/13/2023 06:49:23 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:49:23 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:49:23 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:23 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:49:23 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:49:23 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:49:23 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:49:23 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:49:23 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:49:23 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:49:23 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:23 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:24 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:49:24 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:49:24 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:49:24 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:49:24 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:49:24 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:49:24 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:49:24 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:49:24\x00'
+04/13/2023 06:49:24 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:49:24 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:49:24 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:49:24 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:49:24 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:49:24 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:49:24 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:49:24 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:49:24\x00'
+04/13/2023 06:49:24 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:49:24\x00'
+04/13/2023 06:49:24 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:49:24 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:49:24 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:49:24 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00\x07\x00\x00\x00d'
+04/13/2023 06:49:24 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:49:24 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:49:24 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:24 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:49:24 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:49:24 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:49:24 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:49:24 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:49:24 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:49:24 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:49:24 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:24 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:25 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:49:25 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:49:25 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:49:25 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:49:25 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:49:25 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:49:25 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:49:25 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:49:25\x00'
+04/13/2023 06:49:25 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:49:25 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:49:25 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:49:25 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:49:25 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:49:25 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:49:25 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:49:25 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:49:25\x00'
+04/13/2023 06:49:25 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:49:25\x00'
+04/13/2023 06:49:25 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:49:25 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:49:25 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:49:25 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00\n\x00\x00\x00d'
+04/13/2023 06:49:25 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:49:25 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:49:25 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:25 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:49:25 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:49:25 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:49:25 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:49:25 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:49:25 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:49:25 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:49:25 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:25 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:26 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:49:26 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:49:26 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:49:26 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:49:26 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:49:26 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:49:26 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:49:26 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:49:26\x00'
+04/13/2023 06:49:26 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:49:26 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:49:26 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:49:26 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:49:26 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:49:26 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:49:26 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:49:26 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:49:26\x00'
+04/13/2023 06:49:26 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:49:26\x00'
+04/13/2023 06:49:26 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:49:26 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:49:26 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:49:26 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00*\x00\x00\x00d'
+04/13/2023 06:49:26 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:49:26 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:49:26 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:26 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:49:26 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:49:26 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:49:26 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:49:26 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:49:26 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:49:26 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:49:26 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:49:26 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:51:50 PM Using selector: EpollSelector
+04/13/2023 06:52:23 PM ----New data----
+Raw data from KISS: b'\x00\xa6\xa8\xb4\xb4\x98\xb4`\x96\xa2h\x86\xa8\x98\xed\x03\xf0`rX\x1cl \x1cX/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1\r'
+04/13/2023 06:52:23 PM Parsed APRS frame: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:52:23 PM Parsed APRS frame: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+Message: C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:52:24 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:52:24 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:52:24 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:52:24 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:52:24 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:52:24 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:52:24 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:52:24 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:52:23\x00'
+04/13/2023 06:52:24 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:52:24 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:52:24 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:52:24 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:52:24 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:52:24 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:52:24 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:52:24 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:52:23\x00'
+04/13/2023 06:52:24 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:52:23\x00'
+04/13/2023 06:52:24 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:52:24 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:52:24 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:52:24 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00!\x00\x00\x00d'
+04/13/2023 06:52:24 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:52:24 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:52:24 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:24 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:52:24 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:52:24 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:52:24 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:52:24 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:52:24 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:52:24 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:52:24 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:24 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:24 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:52:24 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:52:24 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:52:24 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:52:24 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:52:24 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:52:24 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:52:24 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:52:24\x00'
+04/13/2023 06:52:24 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:52:24 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:52:24 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:52:24 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:52:24 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:52:24 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:52:24 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:52:24 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:52:24\x00'
+04/13/2023 06:52:24 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:52:24\x00'
+04/13/2023 06:52:24 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:52:24 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:52:24 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:52:24 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x006\x00\x00\x00d'
+04/13/2023 06:52:24 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:52:24 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:52:24 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:24 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:52:24 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:52:24 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:52:24 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:52:24 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:52:24 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:52:24 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:52:24 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:24 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:25 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:52:25 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:52:25 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:52:25 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:52:25 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:52:25 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:52:25 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:52:25 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:52:25\x00'
+04/13/2023 06:52:25 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:52:25 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:52:25 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:52:25 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:52:25 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:52:25 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:52:25 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:52:25 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:52:25\x00'
+04/13/2023 06:52:25 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:52:25\x00'
+04/13/2023 06:52:25 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:52:25 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:52:25 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:52:25 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00\x0f\x00\x00\x00d'
+04/13/2023 06:52:25 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:52:25 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:52:25 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:25 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:52:25 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:52:25 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:52:25 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:52:25 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:52:25 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:52:25 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:52:25 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:25 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:26 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:52:26 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:52:26 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:52:26 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:52:26 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:52:26 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:52:26 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:52:26 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:52:26\x00'
+04/13/2023 06:52:26 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:52:26 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:52:26 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:52:26 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:52:26 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:52:26 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:52:26 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:52:26 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:52:26\x00'
+04/13/2023 06:52:26 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:52:26\x00'
+04/13/2023 06:52:26 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:52:26 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:52:26 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:52:26 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00\x0f\x00\x00\x00d'
+04/13/2023 06:52:26 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:52:26 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:52:26 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:26 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:52:26 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:52:26 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:52:26 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:52:26 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:52:26 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:52:26 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:52:26 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:52:26 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:53:47 PM Using selector: EpollSelector
+04/13/2023 06:54:11 PM ----New data----
+Raw data from KISS: b'\x00\xa6\xa8\xb4\xb4\x98\xb4`\x96\xa2h\x86\xa8\x98\xed\x03\xf0`rX\x1cl \x1cX/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1\r'
+04/13/2023 06:54:11 PM Parsed APRS frame: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:54:11 PM Parsed APRS frame: KQ4CTL>STZZLZ:`rXl X/`C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+Message: C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3_1
+04/13/2023 06:54:11 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:54:11 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:54:11 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:54:11 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:54:11 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:54:11 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:54:11 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:54:11 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:54:11\x00'
+04/13/2023 06:54:11 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:54:11 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:54:11 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:54:11 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:54:11 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:54:11 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:54:11 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:54:11 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:54:11\x00'
+04/13/2023 06:54:11 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:54:11\x00'
+04/13/2023 06:54:11 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:54:11 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:54:11 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:54:11 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00\t\x00\x00\x00d'
+04/13/2023 06:54:11 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:54:11 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:54:11 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:11 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:54:11 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:54:11 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:54:11 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:54:11 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:54:11 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:54:11 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:54:11 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:11 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:12 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:54:12 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:54:12 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:54:12 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:54:12 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:54:12 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:54:12 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:54:12 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:54:12\x00'
+04/13/2023 06:54:12 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:54:12 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:54:12 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:54:12 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:54:12 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:54:12 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:54:12 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:54:12 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:54:12\x00'
+04/13/2023 06:54:12 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:54:12\x00'
+04/13/2023 06:54:12 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:54:12 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:54:12 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:54:12 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00(\x00\x00\x00d'
+04/13/2023 06:54:12 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:54:12 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:54:12 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:12 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:54:12 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:54:12 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:54:12 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:54:12 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:54:12 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:54:12 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:54:12 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:12 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:13 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:54:13 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:54:13 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:54:13 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:54:13 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:54:13 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:54:13 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:54:13 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:54:13\x00'
+04/13/2023 06:54:13 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:54:13 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:54:13 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:54:13 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:54:13 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:54:13 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:54:13 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:54:13 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:54:13\x00'
+04/13/2023 06:54:13 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:54:13\x00'
+04/13/2023 06:54:13 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:54:13 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:54:13 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:54:13 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00\x18\x00\x00\x00d'
+04/13/2023 06:54:13 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:54:13 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:54:13 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:13 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:54:13 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:54:13 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:54:13 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:54:13 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:54:13 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:54:13 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:54:13 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:13 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:14 PM tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:54:14 PM tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:54:14 PM tag: Make (271) - type: string (2) Tag Location: 46 - Data Location: 134 - value: b'RaspberryPi\x00'
+04/13/2023 06:54:14 PM tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 146 - value: b'RP_ov5647\x00'
+04/13/2023 06:54:14 PM tag: XResolution (282) - type: rational (5) Tag Location: 70 - Data Location: 156 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:54:14 PM tag: YResolution (283) - type: rational (5) Tag Location: 82 - Data Location: 164 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
+04/13/2023 06:54:14 PM tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:54:14 PM tag: DateTime (306) - type: string (2) Tag Location: 106 - Data Location: 172 - value: b'2023:04:13 18:54:14\x00'
+04/13/2023 06:54:14 PM tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:54:14 PM tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc0'
+04/13/2023 06:54:14 PM tag: ExposureTime (33434) - type: rational (5) Tag Location: 206 - Data Location: 474 - value: b'\x00\x00\x80\xce\x00\x0fB@'
+04/13/2023 06:54:14 PM tag: FNumber (33437) - type: rational (5) Tag Location: 218 - Data Location: 482 - value: b"\x00\x00q8\x00\x00'\x10"
+04/13/2023 06:54:14 PM tag: ExposureProgram (34850) - type: short (3) - value: b'\x00\x03'
+04/13/2023 06:54:14 PM tag: ISOSpeedRatings (34855) - type: short (3) - value: b'\x00}'
+04/13/2023 06:54:14 PM tag: ExifVersion (36864) - type: undefined (7) - value: b'0220'
+04/13/2023 06:54:14 PM tag: DateTimeOriginal (36867) - type: string (2) Tag Location: 266 - Data Location: 490 - value: b'2023:04:13 18:54:14\x00'
+04/13/2023 06:54:14 PM tag: DateTImeDigitized (36868) - type: string (2) Tag Location: 278 - Data Location: 510 - value: b'2023:04:13 18:54:14\x00'
+04/13/2023 06:54:14 PM tag: ComponentsConfiguration (37121) - type: undefined (7) - value: b'\x01\x02\x03\x00'
+04/13/2023 06:54:14 PM tag: ShutterSpeedValue (37377) - type: signed rational (10) Tag Location: 302 - Data Location: 530 - value: b'\x00K\x1c\x9f\x00\x0fB@'
+04/13/2023 06:54:14 PM tag: ApertureValue (37378) - type: rational (5) Tag Location: 314 - Data Location: 538 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:54:14 PM tag: BrightnessValue (37379) - type: signed rational (10) Tag Location: 326 - Data Location: 546 - value: b'\x00\x00\x00\x0e\x00\x00\x00d'
+04/13/2023 06:54:14 PM tag: MaxApertureValue (37381) - type: rational (5) Tag Location: 338 - Data Location: 554 - value: b"\x00\x00w\xf1\x00\x00'\x10"
+04/13/2023 06:54:14 PM tag: MeteringMode (37383) - type: short (3) - value: b'\x00\x02'
+04/13/2023 06:54:14 PM tag: Flash (37385) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:14 PM tag: FocalLength (37386) - type: rational (5) Tag Location: 374 - Data Location: 562 - value: b"\x00\x00\x8c\x88\x00\x00'\x10"
+04/13/2023 06:54:14 PM tag: MakerNote (37500) - type: undefined (7) Tag Location: 386 - Data Location: 570 - value: <table: 314 bytes>
+04/13/2023 06:54:14 PM tag: FlashPixVersion (40960) - type: undefined (7) - value: b'0100'
+04/13/2023 06:54:14 PM tag: ColorSpace (40961) - type: short (3) - value: b'\x00\x01'
+04/13/2023 06:54:14 PM tag: PixelXDimension (40962) - type: long (4) - value: b'\x00\x00\x05\x00'
+04/13/2023 06:54:14 PM tag: PixelYDimension (40963) - type: long (4) - value: b'\x00\x00\x02\xd0'
+04/13/2023 06:54:14 PM tag: InteroperabilityIFD (40965) - type: long (4) - value: b'\x00\x00\x03t'
+04/13/2023 06:54:14 PM tag: ExposureMode (41986) - type: short (3) - value: b'\x00\x00'
+04/13/2023 06:54:14 PM tag: WhiteBalance (41987) - type: short (3) - value: b'\x00\x00'

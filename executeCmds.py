@@ -124,3 +124,4 @@ def executeCmds(APRS_clip, cam):
         else:
             print("Either indexing is wrong or the received msg is off-center")
         x = x + 3
+
