@@ -82,38 +82,41 @@ class APRSInterface:
         self.ki.stop()
 
     def printPacket(self, raw_data):
-        try:
-            logMsgs = []
-            logMsgs.append("----New data----")
-            logMsgs.append("Raw data from KISS: "+str(raw_data))
 
-            # Turn raw input bytes from KISS into an APRS frame
-            newFrame = aprs.parse_frame(raw_data)
+        logMsgs = []
+        logMsgs.append("----New data----")
+        logMsgs.append("Raw data from KISS: "+str(raw_data))
+        logging.debug("\n".join(logMsgs))
 
-            logMsgs.append("Parsed APRS frame: " + str(newFrame))
+        logMsgs = []
+        # Turn raw input bytes from KISS into an APRS frame
+        newFrame = aprs.parse_frame(raw_data)
 
-            # Turn the APRS frame into an aprspy library APRS object because
-            # only aprspy has actual documentation on reading the data
-            packet = aprspy.APRS.parse(str(newFrame))
+        logMsgs.append("Parsed APRS frame: " + str(newFrame))
+        logging.debug("\n".join(logMsgs))
 
-            # Print data common to all packet types
-            logMsgs.append(f"APRS Packet: {str(packet)}")
-            logMsgs.append(f"Source: {str(packet.source)}")
-            logMsgs.append(f"Destination: {str(packet.destination)}")
-            logMsgs.append(f"Path: {str(packet.path)}")
-            logMsgs.append(f"Timestamp: {str(packet.timestamp)}")
-            logMsgs.append(f"Info: {str(packet.info)}")
+        logMsgs = []
+        # Turn the APRS frame into an aprspy library APRS object because
+        # only aprspy has actual documentation on reading the data
+        packet = aprspy.APRS.parse(str(newFrame))
 
-            # Print message if this is a message packet
-            # (there may be a better way to check packet type, but this works)
-            # Create a global variable aprsMsg that can be used to execute cmds
-            if str(packet).startswith("<MessagePacket"):
-                logMsgs.append("Message: " + str(packet.message))
-                self.aprsMsg.append(str(packet.message))
+        # Print data common to all packet types
+        logMsgs.append(f"APRS Packet: {str(packet)}")
+        logMsgs.append(f"Source: {str(packet.source)}")
+        logMsgs.append(f"Destination: {str(packet.destination)}")
+        logMsgs.append(f"Path: {str(packet.path)}")
+        logMsgs.append(f"Timestamp: {str(packet.timestamp)}")
+        logMsgs.append(f"Info: {str(packet.info)}")
 
-            # Join all the messages together and log it as one debug message
-            logging.debug("\n".join(logMsgs))
+        # Print message if this is a message packet
+        # (there may be a better way to check packet type, but this works)
+        # Create a global variable aprsMsg that can be used to execute cmds
+        if str(packet).startswith("<MessagePacket"):
+            logMsgs.append("Message: " + str(packet.message))
+            self.aprsMsg.append(str(packet.message))
 
-        except:
-            # Sometimes you just get bad data cuz the signal is wonky
-            logging.debug("failed to parse message lmao")
+        # Join all the messages together and log it as one debug message
+        logging.debug("\n".join(logMsgs))
+
+        # Sometimes you just get bad data cuz the signal is wonky
+        # logging.debug("failed to parse message lmao")
