@@ -6,6 +6,7 @@ import time
 from PIL import Image
 import executeCmds  # Change for Hville
 import asyncio
+import os
 #import mathutils
 
 # Necessary to prevent import issues on APRSInterface
@@ -116,9 +117,19 @@ class PayloadSystem:
 
             # The index of 7 takes out the callsign
             APRS_clip = self.aprs_interface.aprsMsg[0]#[7:]
-            # Change to executeCmds for Hville
-            # Execute the commands for the camera unit
-            executeCmds.executeCmds(APRS_clip, self.cameraChoice)
+
+            count = 0
+            try:
+                while True:
+                    os.mkdir(f"./capture{count}")
+                    # Change to executeCmds for Hville
+                    # Execute the commands for the camera unit
+                    executeCmds.executeCmds(APRS_clip, self.cameraChoice, f"./capture{count}/")
+
+                    time.sleep(30)
+                    count+=1
+            except KeyboardInterrupt:
+                pass
 
             self.state = self.LaunchState.RECOVER
 
@@ -157,8 +168,8 @@ class PayloadSystem:
         # choose antenna 2
         elif gravity[1] < 0: # or gravity[1] > 8.5*0.707: 
             # set output pins to output
-            GPIO.output(self.ANTENNA_2_PIN, False)
-            GPIO.output(self.ANTENNA_1_PIN, True)
+            GPIO.output(self.ANTENNA_2_PIN, True)
+            GPIO.output(self.ANTENNA_1_PIN, False)
 
             if gravity[0] > 6: # and gravity[2] > 1: 
                 cam_choice = "jahn" # Camera B
