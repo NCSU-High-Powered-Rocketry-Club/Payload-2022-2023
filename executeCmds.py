@@ -14,7 +14,7 @@ import timeStamper
 #example_APRS = "XX4XXX C3 E5 C3 D4 C3 F6 B2 C3 B2 C3"
 #APRS_clip = aprsMsg[7:]
 
-def executeCmds(APRS_clip, cam):
+def executeCmds(APRS_clip, cam, folder_name):
     # Initialize filter variables
     x = 0
     gray = 0
@@ -65,13 +65,13 @@ def executeCmds(APRS_clip, cam):
         elif APRS_clip[x] == "C": # Take picture
             takepic.takepic(cam, x)
             currentTime = datetime.now()
-            picName = f"capture_{cam}_{x}.jpg" # Current image path name
+            picName = f"{folder_name}capture_{cam}_{x}.jpg" # Current image path name
             timeStamper.timeStamper(currentTime, picName) # Replace unfiltered img w/ timestamped image
             
             if gray == 1: # 1 if grayscale filter applied
                 pic2gray = Image.open(picName)
                 pic2gray = imageFilter.blackandwhite(pic2gray,x)
-                pic2gray.save(f"gray_{cam}_{x}.jpg")
+                pic2gray.save(f"{folder_name}gray_{cam}_{x}.jpg")
                 #picName = f"gray_{cam}_{x}.jpg" # Current image path name
             
             # If randnum~=0, then a random filter has been applied
@@ -83,13 +83,13 @@ def executeCmds(APRS_clip, cam):
             elif randnum == 2:
                 pic2filter = Image.open(picName)
                 pic2filter = imageFilter.grassless(pic2filter)
-                pic2filter.save(f"grassless_{cam}_{x}.jpg")
-                picName = f"grassless_{cam}_{x}.jpg" # Current image path name
+                pic2filter.save(f"{folder_name}grassless_{cam}_{x}.jpg")
+                picName = f"{folder_name}grassless_{cam}_{x}.jpg" # Current image path name
             elif randnum == 3:
                 pic2filter = Image.open(picName)
                 pic2filter = imageFilter.meme(pic2filter)
-                pic2filter.save(f"meme_{cam}_{x}.jpg")
-                picName = f"meme_{cam}_{x}.jpg" # Current image path name
+                pic2filter.save(f"{folder_name}meme_{cam}_{x}.jpg")
+                picName = f"{folder_name}meme_{cam}_{x}.jpg" # Current image path name
             elif randnum != 0:
                 print('Your RNG is broken')
             timeStamper.timeStamper(currentTime, picName) # Replace unfiltered img w/ timestamped image
@@ -107,7 +107,7 @@ def executeCmds(APRS_clip, cam):
             #pic2rotate = Image.open(f"capture_{cam}_{x-3}.jpg")
             pic2rotate = Image.open(picName)
             pic2rotate = imageFilter.rotate180(pic2rotate,x)
-            #pic2rotate.save("capture_%s_%d.jpg" % (cam, x))
+            pic2rotate.save(f"{folder_name}rotated_{x}.jpg")
             print("F6")
 
         elif APRS_clip[x] == "G": # Special effects filter

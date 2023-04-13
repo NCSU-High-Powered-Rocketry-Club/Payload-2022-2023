@@ -27,15 +27,12 @@ def meme(image: Image):
 
 def rotate180(image: Image,x):
     image_data = image.rotate(180)
-    image_data.save('rotated_%d.jpg' % x)
+    # image_data.save('rotated_%d.jpg' % x)
+    return image_data
 
 def blackandwhite(image: Image,x):
     bnw = image.convert("1")
     return bnw
-if __name__ == "__main__":
-    pic2filter = Image.open("MikeWhenHe.png")
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(fry(pic2filter, 5))
 
 def timestamp(image: Image):
     height, width = image.size
