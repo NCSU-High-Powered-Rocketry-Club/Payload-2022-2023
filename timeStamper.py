@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 
 def timeStamper(currentTime, picName):
-    timeStampMsg = currentTime.strftime("%Y.%m.%d - %H:%H:%S")
+    timeStampMsg = currentTime.strftime("%Y.%m.%d - %H:%M:%S") + " BST"
     img = Image.open(picName)
     I1 = ImageDraw.Draw(img)
     [l,w] = img.size

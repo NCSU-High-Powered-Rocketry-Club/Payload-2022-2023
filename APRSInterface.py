@@ -6,6 +6,15 @@ import threading
 import time
 import logging
 
+import re
+
+def match_commnads(msg):
+    # print("Original: " + msg)
+    for i in range(len(msg)):
+        sub_msg = msg[i:]
+        # print(f"New {sub_msg}")
+        if bool(re.match(r'^([A-Z]\d\s?)+(_1)?$', sub_msg, re.A)):
+            return sub_msg
 
 class APRSInterface:
     def __init__(self, frequency: str = "144.39"):
@@ -96,9 +105,10 @@ class APRSInterface:
         logMsgs.append("Parsed APRS frame: " + str(newFrame))
         logging.debug("\n".join(logMsgs))
 
-        self.aprsMsg.append(newFrame[24:])
-        logMsgs.append("Message: " + newFrame[24:])
-        print(newFrame[24:])
+        newFrame = match_commnads(newFrame)
+        self.aprsMsg.append(newFrame)
+        logMsgs.append("Message: " + newFrame)
+        print(newFrame)
 
         # logMsgs = []
         # # Turn the APRS frame into an aprspy library APRS object because
