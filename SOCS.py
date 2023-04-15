@@ -30,6 +30,11 @@ class PayloadSystem:
     ANTENNA_1_PIN = 17
     ANTENNA_2_PIN = 27
 
+    BACKUP_LAUNCH_TIME = 45 * 60
+    BACKUP_COMMAND_TIME = 5 * 60
+
+    BACKUP_COMMAND = "C1 B2 C1 G4 H3_1"
+
     # rocket state
     class LaunchState(Enum):
         STANDBY = 0
@@ -62,6 +67,8 @@ class PayloadSystem:
         # Variable to track whether message received
         self.messageReceived = False
 
+        self.init_time = time.time()
+
     def update(self):
         currentState = self.state
         if currentState is self.LaunchState.STANDBY:
@@ -80,6 +87,10 @@ class PayloadSystem:
                     self.delayStart = time.time()
                     self.state = self.LaunchState.LAUNCH
                     print("LIFTOFF DETECTED")
+            elif time.time() > self.init_time + self.BACKUP_LAUNCH_TIME:
+                self.delayStart = time.time()
+                self.state = self.LaunchState.LAUNCH
+                print("BACKUP TIMER ACTIVATED: LIFTOFF DETECTED")
 
         elif currentState is self.LaunchState.LAUNCH:
             # Do launch stuff
@@ -90,6 +101,7 @@ class PayloadSystem:
                 cam_choice = self.choose_antenna()
                 self.aprs_interface.startRecv()
 
+                self.land_time = time.time()
                 self.state = self.LaunchState.LANDING
                 print("LANDED! Choosing antenna...")
 
@@ -105,6 +117,12 @@ class PayloadSystem:
                 self.aprs_interface.stop()
                 self.messageReceived = True
                 self.state = self.LaunchState.CAMERA
+            elif time.time() > (self.land_time + self.BACKUP_COMMAND_TIME):
+                self.aprs_interface.stop()
+                self.messageReceived = True
+                self.aprs_interface.aprsMsg.append(self.BACKUP_COMMAND)
+                self.state = self.LaunchState.CAMERA
+                print("BACKUP TIMER ACTIVATED: MESSAGE RECEIVED")
 
         elif currentState is self.LaunchState.CAMERA:
             
@@ -126,7 +144,7 @@ class PayloadSystem:
                     # Execute the commands for the camera unit
                     executeCmds.executeCmds(APRS_clip, self.cameraChoice, f"./capture{count}/")
 
-                    time.sleep(30)
+                    time.sleep(300)
                     count+=1
             except KeyboardInterrupt:
                 pass
