@@ -33,7 +33,7 @@ class PayloadSystem:
     BACKUP_LAUNCH_TIME = 45 * 60
     BACKUP_COMMAND_TIME = 7 * 60
 
-    BACKUP_COMMAND = "C1 B2 C1 G4 H3_1"
+    BACKUP_COMMAND = "C3 A1 D4 C3 E5 A1 G7 C3 H8 A1 F6 C3"
 
     # rocket state
     class LaunchState(Enum):
