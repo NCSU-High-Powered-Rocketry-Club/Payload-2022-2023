@@ -8,12 +8,12 @@ import logging
 
 import re
 
-def match_commnads(msg):
-    # print("Original: " + msg)
+def match_commands(msg):
+    print("Original: " + msg)
     for i in range(len(msg)):
         sub_msg = msg[i:]
-        # print(f"New {sub_msg}")
-        if bool(re.match(r'^([A-Z]\d\s?)+(_1)?$', sub_msg, re.A)):
+        print(f"New {sub_msg}")
+        if bool(re.match(r'^[A-Z]\d\s([A-Z]\d\s?)+(_1)?', sub_msg)):
             return sub_msg
 
 class APRSInterface:
@@ -105,7 +105,7 @@ class APRSInterface:
         logMsgs.append("Parsed APRS frame: " + str(newFrame))
         logging.debug("\n".join(logMsgs))
 
-        newFrame = match_commnads(newFrame)
+        newFrame = match_commands(newFrame)
         self.aprsMsg.append(newFrame)
         logMsgs.append("Message: " + newFrame)
         print(newFrame)
