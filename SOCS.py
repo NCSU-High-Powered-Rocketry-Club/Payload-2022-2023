@@ -21,7 +21,7 @@ if True:
 class PayloadSystem:
 
     # time from launch to landing, in seconds
-    DESCENT_TIME = 10
+    DESCENT_TIME = 5 * 60 
 
     # amount of values to collect for rolling launch detect average
     AVERAGE_COUNT = 250
@@ -31,7 +31,7 @@ class PayloadSystem:
     ANTENNA_2_PIN = 27
 
     BACKUP_LAUNCH_TIME = 45 * 60
-    BACKUP_COMMAND_TIME = 5 * 60
+    BACKUP_COMMAND_TIME = 7 * 60
 
     BACKUP_COMMAND = "C1 B2 C1 G4 H3_1"
 
